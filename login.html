@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(abc.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+.login-container {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 320px;
+    backdrop-filter: blur(5px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.align{
+    position: relative;
+    right: 10px;
+}
+.input-group {
+    margin-bottom: 20px;
+    align-items: center;
+}
+.input-group label {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 110%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+
+.forgot-register {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.forgot-register a {
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+
+.forgot-register a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.submit-btn {
+    text-align: center;
+}
+
+.submit-btn button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn button:hover {
+    background-color: #0056b3;
+}
+.logo{
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #f39c12;
+            position: fixed;
+            left: 120px;
+            top: 15px;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            position: fixed;
+            left: 500px;
+            top: 20px;
+            
+        }
+        #navbar a{
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+        #navbar a:hover{
+            color: #f39c12;
+        }
+        .login{
+            border-radius: 1px;
+            padding: 10px 10px;
+            border: 1px solid whitesmoke;
+            text-decoration: none;
+            position: absolute;
+            left: 1100px;
+            width: 80px;
+            height: 40px;
+            top: 10px;
+        }
+        .login p{
+            position: fixed;
+            left: 1120px;
+            color: white;
+        }
+        .login :hover{
+        color:  #f39c12;
+        }
+        #navitems{
+            background-color:  #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            top: 0;
+            transition: top 0.5s;
+        }
+
+   </style>
+</head>
+<body>
+    <div id="navitems">
+        <div class="logo"> NEXGEN</div> 
+        <div id="navbar">
+         <a href="./Nexgen.html">Home </a>
+         <a href="./products.html">Products</a>
+         <a href="./about us.html">About Us</a> 
+         <a href="./support.html">Support</a>
+            </div>
+            <div class="login">
+                <a href="./login.html"><p>Login</p></a>
+            </div>
+        </div>
+    <!-- <div class="cross">
+    <a href="Nexgen.html"><img src="image.png" width="20px" height="20px"></a>
+    </div> -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <div class="align">
+            <div class="input-group">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            </div>
+            <div class="forgot-register">
+                <lable><input type="checkbox">   Remember Me  </lable>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <div class="submit-btn">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
