@@ -7,6 +7,7 @@
        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
+    
     * {
             margin: 0;
             padding: 0;
@@ -130,67 +131,6 @@ body.light-mode #theme-toggle {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    #navitems {
-        padding: 0 20px;
-        height: 60px;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    #navbar {
-        gap: 15px;
-    }
-
-    #navbar a {
-        font-size: 1rem;
-    }
-
-    .login {
-        padding: 8px 15px;
-    }
-
-    .login a {
-        font-size: 0.9rem;
-    }
-
-    #theme-toggle {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #navitems {
-        padding: 0 15px;
-        height: 50px;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    #navbar {
-        gap: 10px;
-    }
-
-    #navbar a {
-        font-size: 0.9rem;
-    }
-
-    .login {
-        padding: 6px 12px;
-    }
-
-    .login a {
-        font-size: 0.8rem;
-    }
-
-    #theme-toggle {
-        font-size: 1rem;
-    }
-}
 .support-section {
             padding: 100px 40px 40px;
             max-width: 1200px;
@@ -205,6 +145,11 @@ body.light-mode #theme-toggle {
             margin-bottom: 20px;
             text-align: center;
         }
+        body.light-mode .support-section h1{
+            color: #333;
+            text-shadow: 0 0 10px #f39c12;
+        }
+
 
         .support-section h2 {
             font-family: 'Poppins', sans-serif;
@@ -242,6 +187,7 @@ body.light-mode #theme-toggle {
 
         .knowledge-base h2 {
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .search-bar {
@@ -344,6 +290,7 @@ body.light-mode #theme-toggle {
 
         .community-forum h2 {
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .community-forum p {
@@ -407,6 +354,7 @@ body.light-mode #theme-toggle {
 
         .video-tutorials h2 {
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .video-grid {
@@ -460,6 +408,7 @@ body.light-mode #theme-toggle {
 
         .feedback-form h2 {
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .feedback-form input,
@@ -752,29 +701,29 @@ body.light-mode .copyright {
         <div class="community-forum">
             <h2>Community Forum</h2>
             <p>Join our community forum to ask questions, share solutions, and connect with other gamers.</p>
-            <button class="btn">Visit Forum</button>
+            <a href="login.html"><button class="btn">Visit Forum</button></a>
         </div>
 
         <div class="warranty-checker">
             <h2>Warranty Checker</h2>
             <input type="text" placeholder="Enter your serial number">
-            <button>Check Warranty</button>
+            <button class="warranty-checker-btn">Check Warranty</button>
         </div>
 
         <div class="video-tutorials">
             <h2>Video Tutorials</h2>
             <div class="video-grid">
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3>How to Set Up Your Gaming Mouse</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q82tQJyJwgk?si=k1Sz5BlRa3ijD260" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>The RTX 5090 Testing</h3>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3>Customizing Your Keyboard</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9ZTu_aOSmfg?si=Mc_vsH_SI8aBhN2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3> Apple Vision Pro Reviews </h3>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3>Optimizing Your Headset</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QtMzV73NAgk?si=lwHYq6lC95JgHeu2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>PlayStation 5 Unboxing & Accessories</h3>
                 </div>
             </div>
         </div>
@@ -877,6 +826,13 @@ window.onscroll = function() {
 scrollToTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+});
+const warrantycheckerButtons = document.querySelectorAll('.warranty-checker-btn');
+
+warrantycheckerButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        alert("Sorry your warranty has been expired");
+    });
 });
 
     </script>

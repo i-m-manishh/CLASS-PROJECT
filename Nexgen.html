@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        * {
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -130,69 +130,7 @@ body.light-mode #theme-toggle {
     color: #f39c12;
     transform: scale(1.1);
 }
-
-@media (max-width: 768px) {
-    #navitems {
-        padding: 0 20px;
-        height: 60px;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    #navbar {
-        gap: 15px;
-    }
-
-    #navbar a {
-        font-size: 1rem;
-    }
-
-    .login {
-        padding: 8px 15px;
-    }
-
-    .login a {
-        font-size: 0.9rem;
-    }
-
-    #theme-toggle {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #navitems {
-        padding: 0 15px;
-        height: 50px;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    #navbar {
-        gap: 10px;
-    }
-
-    #navbar a {
-        font-size: 0.9rem;
-    }
-
-    .login {
-        padding: 6px 12px;
-    }
-
-    .login a {
-        font-size: 0.8rem;
-    }
-
-    #theme-toggle {
-        font-size: 1rem;
-    }
-}
-        .bgimage {
+  .bgimage {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.jpg') center/cover;
             display: flex;
@@ -982,7 +920,7 @@ body.light-mode .copyright {
     </footer>
 
     <button id="scroll-to-top" title="Go to top">↑</button>
-    <button id="live-chat" title="Live Chat">💬</button>
+    <a href="https:chat.com"> <button id="live-chat" title="Live Chat">💬</button> </a>
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
