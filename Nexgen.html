@@ -1,200 +1,1029 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXGEN</title>
-    <style>* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-    }
-    #navitems{
-            background-color:  #1a1a1a;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            height: 60px;
-            top: 0;
-            transition: top 0.5s;
-        }
-        .logo{
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            color: #f39c12;
-            position: fixed;
-            left: 120px;
-        }
-        #navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            position: fixed;
-            left: 500px;
-        }
-        #navbar a{
-            color: white;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-        #navbar a:hover{
-            color: #f39c12;
-        }
-        .login{
-            border-radius: 1px;
-            padding: 10px 10px;
-            border: 1px solid whitesmoke;
+    <title>NEXGEN | Gaming Revolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             text-decoration: none;
-            position: absolute;
-            left: 1100px;
-            width: 80px;
-            height: 40px;
+            font-family: 'Lato', sans-serif;
         }
-        .login p{
-            position: fixed;
-            left: 1120px;
+
+        body {
+            background-color: black;
             color: white;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .login :hover{
-        color:  #f39c12;
+
+        body.light-mode {
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .bgimage{
+
+    #navitems {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    padding: 0 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+body.light-mode #navitems {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+#navbar {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#navbar a {
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s;
+}
+
+body.light-mode #navbar a {
+    color: #333;
+}
+
+#navbar a:hover {
+    color: #f39c12;
+    transform: translateY(-2px);
+}
+
+body.light-mode #navbar a:hover {
+    color: #f39c12;
+    transform: translateY(-2px);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login {
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+body.light-mode .login {
+    border: 1px solid #333;
+}
+
+.login a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+body.light-mode .login a {
+    color: #333;
+}
+
+.login:hover {
+    background: #f39c12;
+    border-color: #f39c12;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+body.light-mode #theme-toggle {
+    color: #333;
+}
+
+#theme-toggle:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #navitems {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #navbar {
+        gap: 15px;
+    }
+
+    #navbar a {
+        font-size: 1rem;
+    }
+
+    .login {
+        padding: 8px 15px;
+    }
+
+    .login a {
+        font-size: 0.9rem;
+    }
+
+    #theme-toggle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #navitems {
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    #navbar {
+        gap: 10px;
+    }
+
+    #navbar a {
+        font-size: 0.9rem;
+    }
+
+    .login {
+        padding: 6px 12px;
+    }
+
+    .login a {
+        font-size: 0.8rem;
+    }
+
+    #theme-toggle {
+        font-size: 1rem;
+    }
+}
+        .bgimage {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(abc.jpg);
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 5%;
+            color: white;
         }
-        .content h2{
-            font-family:  Serif Fonts;
-            font-size: 3em;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 10px  #f39c12;
-            color: whitesmoke;
+
+        body.light-mode .bgimage {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('bg.jpg') center/cover;
+            color: #333;
         }
-        .content p{
-            font-family:  Serif Fonts;
-            font-size: 3em;
-            margin-bottom: 1rem;
+
+        .content h2 {
+            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
             text-shadow: 0 0 10px #f39c12;
-            color: whitesmoke;
+            margin-bottom: 20px;
         }
+
+        .content p {
+            font-size: 1.2rem;
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 30px;
+        }
+
         .btn {
-            padding: 15px 30px;
+            padding: 10px 25px;
             background: #f39c12;
-            color: #fff;
             border: none;
             border-radius: 5px;
-            font-size: 1.2em;
             cursor: pointer;
             transition: background 0.3s;
         }
-        .btn p:hover {
-            background: #f39c12;
-        }
-        .products{
-            background-color:  #1a1a1a;
-            width: 100%;
-            height: 110vh;
-        }
-        .products h1{
+
+        .btn a {
             color: white;
-            text-shadow: 0 0 10px #f39c12;
-            font-size: 40px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            left: 40px;
-            top: 40px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
         }
-        .product-card {
+
+        .btn:hover {
+            background: #d67d00;
+        }
+
+        .products {
             background-color: #1a1a1a;
-            border-radius: 10px;
-            width: 300px;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: inline-block;
+            padding: 50px 20px;
             text-align: center;
-            position: relative;
-            left: 130px;
-            top: 100px;  
+        }
+
+        body.light-mode .products {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .products h1 {
+            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px #f39c12;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .product-card {
+            background-color: #222;
+            border-radius: 10px;
+            width: 275px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        body.light-mode .product-card {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
         }
 
         .product-card img {
             width: 100%;
+            height: 50%;
+            max-width: 250px;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         .product-card h3 {
             color: #f39c12;
+            font-size: 1.2rem;
             margin: 15px 0;
+            font-family: 'Poppins', sans-serif;
         }
 
         .product-card p {
             color: white;
+            font-size: 0.9rem;
+            font-family: 'Lato', sans-serif;
         }
+
+        body.light-mode .product-card p {
+            color: #333;
+        }
+        .featured{
+            background-color: rgb(17, 16, 16);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .featured h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 0 10px #f39c12;
+        }
+
+    .featured-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+body.light-mode .featured {
+            background-color: whitesmoke;
+            color: #333;
+        }
+
+.featured-product {
+    background-color: #222;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode .featured-product {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.featured-product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.featured-product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.featured-details h3 {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.featured-details p {
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+body.light-mode .featured-details p {
+    color: #333;
+}
+
+.featured-details .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.featured-details button {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-details button:hover {
+    background-color: #e67e22;
+}
+
+.featured-details button a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.rating {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.rating i {
+    font-size: 1.2rem;
+}
+.show-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+.show-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.show-more-container .btn {
+    padding: 10px 30px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.show-more-container .btn:hover {
+    background-color: #e67e22;
+}
+        .reviews-container {
+            background-color: #1a1a1a;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        body.light-mode .reviews-container {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .reviews-container h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 0 10px #f39c12;
+        }
+
+        .review-card {
+            background-color: #222;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        body.light-mode .review-card {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+
+        .user-info {
+            color: #aaa;
+        }
+
+        body.light-mode .user-info {
+            color: #666;
+        }
+
+        .user-name {
+            font-weight: bold;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        body.light-mode .user-name {
+            color: #333;
+        }
+
+        .user-location {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .review-content {
+            color: #ddd;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        body.light-mode .review-content {
+            color: #333;
+        }
+
+        .map-container {
+            margin-top: 50px;
+            width: 100%;
+            height: 400px;
+            background-color: #333;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+    background-color: #181818;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+body.light-mode footer {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    padding-bottom: 30px; 
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    color: #f39c12;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+body.light-mode .footer-section p,
+body.light-mode .footer-section a {
+    color: #333;
+}
+
+.footer-section a:hover {
+    color: #e67e22;
+    transform: translateX(5px);
+}
+
+.newsletter {
+    flex: 1 1 100%; 
+    margin-top: 20px;
+    text-align: left; 
+}
+
+.newsletter h3 {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #f39c12;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+body.light-mode .newsletter p {
+    color: #333;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    width: 700px; 
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #333;
+    color: #f39c12;
+}
+
+body.light-mode .newsletter input {
+    background-color: #b5b5b5;
+    color: #333;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f39c12;
+    color: black;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #e67e22;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f39c12;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+body.light-mode .social-icons a {
+    color: #333;
+}
+
+.social-icons a:hover {
+    color: #e67e22;
+    transform: scale(1.1);
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #f39c12;
+    border-top: 1px solid #f39c12;
+    padding-top: 15px;
+}
+
+body.light-mode .copyright {
+    color: #333;
+}
+#scroll-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #f39c12;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            transition: background 0.3s;
+        }
+
+        #scroll-to-top:hover {
+            background-color: #e67e22;
+        }
+
+        #live-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f39c12;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #live-chat:hover {
+            background-color: #e67e22;
+        }
+
     </style>
+</head>
 <body>
+
     <div id="navitems">
-    <div class="logo"> NEXGEN</div> 
-    <div id="navbar">
-     <a href="./Nexgen.html">Home </a>
-     <a href="./products.html">Products</a>
-     <a href="./about us.html">About Us</a> 
-     <a href="./support.html">Support</a>
+        <div class="logo">NEXGEN</div>
+        <div id="navbar">
+            <a href="Nexgen.html">Home</a>
+            <a href="Shop.html">Shop</a>
+            <a href="about us.html">About Us</a>
+            <a href="support.html">Support</a>
         </div>
         <div class="login">
-            <a href="./login.html"><p>Login</p></a>
+            <a href="login.html">Login</a>
         </div>
+        <button id="theme-toggle" class="btn">🌙</button>
     </div>
+
     <div class="bgimage">
         <div class="content">
             <h2>Level Up Your Game</h2>
             <p>Experience next-gen graphics and performance</p>
-            <button class="btn">Shop Now</button>
-        </div>
-    </div>
-    <div class="products">
-        <h1>Our Products</h1>
-        <div class="product-card">
-            <img src="image copy 5.png" alt="PlayStation 5">
-            <h3>PlayStation 5</h3>
-            <p>Next-gen console with stunning graphics and fast load times.</p>
-        </div>
-        <div class="product-card">
-            <img src="image copy 4.png" alt="Xbox Series X">
-            <h3>Xbox Series X</h3>
-            <p>Powerful performance with 4K resolution and expansive game library.</p>
-        </div>
-        <div class="product-card">
-            <img src="image copy 6.png" alt="Nintendo Switch">
-            <h3>Nintendo Switch</h3>
-            <p>Hybrid console for gaming at home or on the go.</p>
+            <button class="btn"><a href="Shop.html">Shop Now</a></button>
         </div>
     </div>
 
+    <div class="products">
+        <h1>Top Products</h1>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="ps5.png" alt="PlayStation 5">
+                <h3>PlayStation 5</h3>
+                <p>Next-gen console with stunning graphics and fast load times.</p>
+            </div>
+            <div class="product-card">
+                <img src="xbox.png" alt="Xbox Series X">
+                <h3>Xbox Series X</h3>
+                <p>Powerful performance with 4K resolution and expansive game library.</p>
+            </div>
+            <div class="product-card">
+                <img src="nintendo.png" alt="Nintendo Switch">
+                <h3>Nintendo Switch</h3>
+                <p>Hybrid console for gaming at home or on the go.</p>
+            </div>
+            <div class="product-card">
+                <img src="vr.png" alt="Virtual Reality">
+                <h3>Virtual Reality</h3>
+                <p>Imagined environments through computer-generated 3D visuals and sounds.</p>
+            </div>
+            <div class="product-card">
+                <img src="RTX.png" alt="GeForce RTX 5090 GPU">
+                <h3>GeForce RTX 5090 GPU</h3>
+                <p>The RTX 5090's DLSS 4.0 enables ultra-smooth AI-powered 8K gaming.</p>
+            </div>
+            <div class="product-card">
+                <img src="Asus 16.png" alt=" Asus ROG G16">
+                <h3> Asus ROG G16</h3>
+                <p>16" 2.5K OLED display, 240Hz, 0.2ms, 100% DCI-P3, Pantone Validated, G-Sync, Dolby Vision HDR</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured">
+        <h2>Featured Products</h2>
+        <div class="featured-products-container">
+          
+            <div class="featured-product">
+                <img src="chair.png" alt="Gaming Chair">
+                <div class="featured-details">
+                    <h3>Gaming Chair</h3>
+                    <p>Ergonomically designed for long hours of gameplay with maximum comfort.</p>
+                    <p class="price">$299.99</p>
+                    <div class="rating">
+                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
+                    </div>
+                    <button><a href="Shop.html">Shop Now</a></button>
+                </div>
+            </div>
+    
+            <div class="featured-product">
+                <img src="headphone.png" alt="Gaming Headset">
+                <div class="featured-details">
+                    <h3>Gaming Headset</h3>
+                    <p>Immersive sound and noise cancellation for an unbeatable gaming experience.</p>
+                    <p class="price">$129.99</p>
+                    <div class="rating">
+                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+                    </div>
+                    <button><a href="Shop.html">Shop Now</a></button>
+                </div>
+            </div>
+    
+            <div class="featured-product">
+                <img src="keyboard.png" alt="Gaming Keyboard">
+                <div class="featured-details">
+                    <h3>Gaming Keyboard</h3>
+                    <p>RGB lighting with ultra-responsive keys for ultimate gaming control.</p>
+                    <p class="price">$159.99</p>
+                    <div class="rating">
+                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
+                    </div>
+                    <button><a href="Shop.html">Shop Now</a></button>
+                </div>
+            </div>
+    
+            <div class="featured-product">
+                <img src="mouse.png" alt="Gaming Mouse">
+                <div class="featured-details">
+                    <h3>Gaming Mouse</h3>
+                    <p>High-precision sensor with customizable buttons for competitive gaming.</p>
+                    <p class="price">$79.99</p>
+                    <div class="rating">
+                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
+                    </div>
+                    <button><a href="Shop.html">Shop Now</a></button>
+                </div>
+            </div>
+    
+            <div class="featured-product">
+                <img src="monitor.png" alt="Gaming Monitor">
+                <div class="featured-details">
+                    <h3>Gaming Monitor</h3>
+                    <p>240Hz refresh rate and 1ms response time for smooth gameplay.</p>
+                    <p class="price">$499.99</p>
+                    <div class="rating">
+                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+                    </div>
+                    <button><a href="Shop.html">Shop Now</a></button>
+                </div>
+            </div>
+    
+            <div class="featured-product">
+                <img src="desk.png" alt="Gaming Desk">
+                <div class="featured-details">
+                    <h3>Gaming Desk</h3>
+                    <p>Spacious and sturdy desk designed for gaming setups.</p>
+                    <p class="price">$199.99</p>
+                    <div class="rating">
+                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
+                    </div>
+                    <button><a href="Shop.html">Shop Now</a></button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="show-more-container">
+            <a href="Shop.html" class="btn">Show More</a>
+        </div>
+    </div>
+
+
+    <div class="reviews-container">
+        <h2>Customer Reviews</h2>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="sir1.png" alt="User 1" class="user-avatar">
+                <div class="user-info">
+                    <p class="user-name">John Doe</p>
+                    <p class="user-location">USA</p>
+                </div>
+            </div>
+            <div class="review-content">
+                <p class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></p>
+                <p class="review-text">Great gaming mouse, super responsive and comfortable for long hours of play!</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="https://via.placeholder.com/50" alt="User 2" class="user-avatar">
+                <div class="user-info">
+                    <p class="user-name">Jane Smith</p>
+                    <p class="user-location">Canada</p>
+                </div>
+            </div>
+            <div class="review-content">
+                <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></p>
+                <p class="review-text">The keyboard is amazing! RGB lights look awesome and keys feel perfect for gaming.</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="https://via.placeholder.com/50" alt="User 3" class="user-avatar">
+                <div class="user-info">
+                    <p class="user-name">Michael Brown</p>
+                    <p class="user-location">UK</p>
+                </div>
+            </div>
+            <div class="review-content">
+                <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i><i>&#9734;</i></p>
+                <p class="review-text">Headset is comfy but the sound could be improved. Good for long gaming sessions though!</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="https://via.placeholder.com/50" alt="User 4" class="user-avatar">
+                <div class="user-info">
+                    <p class="user-name">Alice Green</p>
+                    <p class="user-location">Australia</p>
+                </div>
+            </div>
+            <div class="review-content">
+                <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></p>
+                <p class="review-text">Excellent controller! Durable, responsive, and has a great grip. Perfect for intense gaming.</p>
+            </div>
+        </div>
+
+    
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.9024130653216!2d-77.0368701!3d38.9071923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b8d0f407742d%3A0x20c8b29a22b268b0!2sNEXGEN!5e0!3m2!1sen!2sus!4v1612361149230!5m2!1sen!2sus" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>NEXGEN</h2>
+                <p>Your ultimate destination for premium gaming peripherals.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="Nexgen.html">Home</a>
+                <a href="Shop.html">Shop</a>
+                <a href="about us.html">About Us</a>
+                <a href="support.html">Support</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Warranty</a>
+                <a href="#">FAQs</a>
+                <a href="#">Track Order</a>
+            </div>
+            <div class="footer-section">
+                <h3>Policies</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Info</a>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive deals and updates.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Nexgen. All Rights Reserved.</p>
+    </footer>
+
+    <button id="scroll-to-top" title="Go to top">↑</button>
+    <button id="live-chat" title="Live Chat">💬</button>
 
     <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-          if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navitems").style.top = "0";
-          } else {
-            document.getElementById("navitems").style.top = "-80px";
-          }
-          prevScrollpos = currentScrollPos;
-        }
-        </script>
+        const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+    localStorage.setItem('theme', theme);
+    themeToggle.textContent = theme === 'light' ? '🌞' : '🌙';
+});
+
+if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    themeToggle.textContent = '🌞';
+}
+
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navitems").style.top = "0";
+    } else {
+        document.getElementById("navitems").style.top = "-80px";
+    }
+    prevScrollpos = currentScrollPos;
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+};
+
+scrollToTopBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+    </script>
     
 </body>
 </html>
