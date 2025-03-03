@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXGEN | Gaming Revolution</title>
-       <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<style>
-    * {
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -25,8 +28,7 @@
             background-color: #f4f4f4;
             color: #333;
         }
-
-    #navitems {
+        #navitems {
     background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
@@ -66,6 +68,7 @@ body.light-mode #navitems {
     transition: color 0.3s;
 }
 
+
 body.light-mode #navbar a {
     color: #333;
 }
@@ -79,13 +82,43 @@ body.light-mode #navbar a:hover {
     color: #f39c12;
     transform: translateY(-2px);
 }
-
 .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex: 1; 
+    justify-content: flex-end;
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    width: 200px; 
+}
+
+.search-bar button {
+    background-color: #f39c12;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #e67e22;
+}
+body.light-mode .search-bar input{
+    background-color: whitesmoke;
+}
 .login {
     border: 1px solid white;
     padding: 10px 20px;
@@ -106,12 +139,10 @@ body.light-mode .login {
 body.light-mode .login a {
     color: #333;
 }
-
 .login:hover {
     background: #f39c12;
     border-color: #f39c12;
 }
-
 #theme-toggle {
     background: none;
     border: none;
@@ -124,7 +155,6 @@ body.light-mode .login a {
 body.light-mode #theme-toggle {
     color: #333;
 }
-
 #theme-toggle:hover {
     color: #f39c12;
     transform: scale(1.1);
@@ -190,86 +220,83 @@ body.light-mode #theme-toggle {
                     transform: translateX(10px);
                     color: #f39c12; 
                 }
-        
-                .team-section {
-                    display: flex;
-                    gap: 30px;
-                    margin-top: 40px;
-                    overflow-x: auto;
-                    padding-bottom: 20px;
-                    scroll-behavior: smooth;
-                }
-        
-                .team-section::-webkit-scrollbar {
-                    height: 8px;
-                }
-        
-                .team-section::-webkit-scrollbar-thumb {
-                    background: #f39c12; 
-                    border-radius: 10px;
-                }
-        
-                .team-section::-webkit-scrollbar-track {
-                    background: #1a1a1a; 
-                }
-        
-                body.light-mode .team-section::-webkit-scrollbar-track {
-                    background: #ddd; 
-                }
-        
-                .team-member {
-                    flex: 0 0 250px;
-                    text-align: center;
-                    padding: 20px;
-                    background-color: #1a1a1a; 
-                    border-radius: 10px;
-                    transition: transform 0.3s, box-shadow 0.3s;
-                }
-        
-                body.light-mode .team-member {
-                    background-color: #ffffff; 
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                }
-        
-                .team-member:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5); 
-                }
-        
-                .team-member img {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
-                    margin-bottom: 15px;
-                    border: 3px solid #f39c12; 
-                }
-        
-                .team-member h3 {
-                    font-size: 1.5rem;
-                    color: #f39c12; 
-                }
-        
-                .team-member p {
-                    font-size: 1rem;
-                    color: #aaa; 
-                }
-        
-                body.light-mode .team-member p {
-                    color: #666; 
-                }
-        
-                .testimonials-section {
+                .Customer-section {
                     margin-top: 60px;
                     background: linear-gradient(135deg, #1a1a1a, #333); 
                     padding: 40px 20px;
                     border-radius: 10px;
                 }
         
-                body.light-mode .testimonials-section {
+                body.light-mode .Customer-section {
                     background: linear-gradient(135deg, #f4f4f4, #ddd); 
                 }
         
-                .testimonial {
+                .why-choose-us {
+            margin-top: 60px;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            border-radius: 10px;
+        }
+
+        body.light-mode .why-choose-us {
+            background: linear-gradient(135deg, #f4f4f4, #ddd);
+        }
+
+        .why-choose-us h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            color: #f39c12;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        body.light-mode .feature-card {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        body.light-mode .feature-card p {
+            color: #666;
+        }
+                .Customer {
                     background-color: #1a1a1a; 
                     padding: 20px;
                     border-radius: 10px;
@@ -278,22 +305,26 @@ body.light-mode #theme-toggle {
                     transition: transform 0.3s, box-shadow 0.3s;
                 }
         
-                body.light-mode .testimonial {
+                body.light-mode .Customer {
                     background-color: #ffffff; 
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                 }
         
-                .testimonial:hover {
+                .Customer:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5); 
+                }
+                body.light-mode .Customer:hover {
                     transform: translateY(-10px);
                     box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5); 
                 }
         
-                .testimonial p {
+                .Customer p {
                     font-style: italic;
                     color: #f39c12; 
                 }
         
-                .testimonial h4 {
+                .Customer h4 {
                     margin-top: 10px;
                     color: #f39c12; 
                 }
@@ -324,8 +355,6 @@ body.light-mode #theme-toggle {
                     flex-direction: column;
                     gap: 15px;
                 }
-        
-                .review-form input,
                 .review-form textarea {
                     padding: 10px;
                     border: 1px solid #f39c12; 
@@ -334,8 +363,7 @@ body.light-mode #theme-toggle {
                     color: #e0e0e0; 
                     font-size: 1rem;
                 }
-        
-                body.light-mode .review-form input,
+
                 body.light-mode .review-form textarea {
                     background-color: #ffffff;
                     color: #333; 
@@ -345,7 +373,7 @@ body.light-mode #theme-toggle {
                     resize: vertical;
                     height: 150px;
                 }
-        
+
                 .review-form button {
                     padding: 10px 20px;
                     border: none;
@@ -360,7 +388,7 @@ body.light-mode #theme-toggle {
         
                 .review-form button:hover {
                     background-color: #e67e22; 
-                }
+               }
         
 footer {
     background-color: #181818;
@@ -557,7 +585,6 @@ body.light-mode .copyright {
         #live-chat:hover {
             background-color: #e67e22;
         }
-
     </style>
 </head>
 <body>
@@ -566,11 +593,16 @@ body.light-mode .copyright {
         <div id="navbar">
             <a href="Nexgen.html">Home</a>
             <a href="Shop.html">Shop</a>
-            <a href="about us.html">About Us</a>
-            <a href="support.html">Support</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Support.html">Support</a>
+            <a href="Delivery.html">Delivery</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
         </div>
         <div class="login">
-            <a href="login.html">Login</a>
+            <a href="Login.html">Login</a>
         </div>
         <button id="theme-toggle" class="btn">🌙</button>
     </div>
@@ -580,7 +612,7 @@ body.light-mode .copyright {
         <p>Welcome to <strong>NEXGEN</strong>, where gaming meets innovation. Founded by a team of passionate gamers, we are dedicated to creating high-performance gaming equipment that enhances every player's experience.</p>
 
         <h2>Our History</h2>
-        <p>NEXGEN was founded in 2020 by a group of gamers who were frustrated with the lack of high-quality, affordable gaming gear. What started as a small project in a garage has now grown into a global brand trusted by millions of gamers worldwide.</p>
+        <p>NEXGEN was founded in 2025 by a group of students who were frustrated with the lack of high-quality, affordable gaming gear. What started as a small project in a garage has now grown into a global brand trusted by millions of gamers worldwide.</p>
 
         <h2>Our Mission</h2>
         <p>Our mission is to empower gamers with cutting-edge gear that combines innovation, durability, and style. We believe in pushing boundaries and delivering exceptional quality to gamers worldwide.</p>
@@ -596,50 +628,47 @@ body.light-mode .copyright {
             <li><strong>Affordability:</strong> Premium quality at prices that won't break the bank.</li>
         </ul>
 
-        <h2>Our Team</h2>
-        <div class="team-section">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 1">
-                <h3>John Doe</h3>
-                <p>Lead Designer</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 2">
-                <h3>Jane Smith</h3>
-                <p>Product Manager</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 3">
-                <h3>Mike Johnson</h3>
-                <p>Customer Support Lead</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 4">
-                <h3>Emily Davis</h3>
-                <p>Marketing Specialist</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 5">
-                <h3>Chris Brown</h3>
-                <p>Software Engineer</p>
+        <h2>Why Choose NEXGEN?</h2>
+        <div class="why-choose-us">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Cutting-Edge Technology</h3>
+                    <p>Our products are built with the latest gaming technology to give you the ultimate edge.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Durability Guaranteed</h3>
+                    <p>Designed to withstand the toughest gaming sessions, ensuring long-lasting performance.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Immersive Experience</h3>
+                    <p>Experience gaming like never before with our immersive audio and visual solutions.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Customer-Centric Support</h3>
+                    <p>Our dedicated support team is always here to help you with any issues or questions.</p>
+                </div>
             </div>
         </div>
 
         <h2>What Our Customers Say</h2>
-        <div class="testimonials-section">
-            <div class="testimonial">
+        <div class="Customer-section">
+            <div class="Customer">
                 <p>"NEXGEN has completely transformed my gaming experience. Their products are top-notch!"</p>
                 <h4>- Alex R.</h4>
             </div>
-            <div class="testimonial">
+            <div class="Customer">
                 <p>"The best gaming gear I've ever used. Highly recommend NEXGEN to all gamers!"</p>
                 <h4>- Sarah L.</h4>
             </div>
-            <div class="testimonial">
+            <div class="Customer">
                 <p>"Amazing quality and performance. NEXGEN is my go-to brand for gaming gear."</p>
                 <h4>- Michael T.</h4>
             </div>
-            <div class="testimonial">
+            <div class="Customer">
                 <p>"NEXGEN's customer service is exceptional. They truly care about their customers."</p>
                 <h4>- Jessica M.</h4>
             </div>
@@ -647,13 +676,12 @@ body.light-mode .copyright {
 
         <h2>Leave a Review</h2>
         <div class="review-form">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
+            <form id="reviewForm">
                 <textarea placeholder="Your Review" required></textarea>
                 <button type="submit">Submit Review</button>
             </form>
         </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -671,8 +699,9 @@ body.light-mode .copyright {
                 <h3>Quick Links</h3>
                 <a href="Nexgen.html">Home</a>
                 <a href="Shop.html">Shop</a>
-                <a href="about us.html">About Us</a>
-                <a href="support.html">Support</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Support.html">Support</a>
+                <a href="Delivery.html">Delivery</a>
             </div>
             <div class="footer-section">
                 <h3>Support</h3>
@@ -704,44 +733,60 @@ body.light-mode .copyright {
     <button id="live-chat" title="Live Chat">💬</button>
 
     <script>
-  const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+      const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
-    const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
-    localStorage.setItem('theme', theme);
-    themeToggle.textContent = theme === 'light' ? '🌞' : '🌙';
-});
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', theme);
+            themeToggle.textContent = theme === 'light' ? '🌞' : '🌙';
+        });
 
-if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light-mode');
-    themeToggle.textContent = '🌞';
-}
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.textContent = '🌞';
+        }
 
-const scrollToTopBtn = document.getElementById('scroll-to-top');
-let prevScrollpos = window.pageYOffset;
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        let prevScrollpos = window.pageYOffset;
 
-window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navitems").style.top = "0";
-    } else {
-        document.getElementById("navitems").style.top = "-80px";
-    }
-    prevScrollpos = currentScrollPos;
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navitems").style.top = "0";
+            } else {
+                document.getElementById("navitems").style.top = "-80px";
+            }
+            prevScrollpos = currentScrollPos;
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = 'block';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-};
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        };
 
-scrollToTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
+        scrollToTopBtn.addEventListener('click', () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            const textarea = document.querySelector('#reviewForm textarea');
+            const isLoggedIn = false; 
+
+            if (!isLoggedIn) {
+                event.preventDefault();
+                alert('Please log in to submit a review.');
+                window.location.href = 'login.html';
+            } else if (textarea.value.trim() === '') {
+                event.preventDefault();
+                alert('Please write a review before submitting.');
+            } else {
+                alert('Thank you for your review!');
+            }
+        });
     </script>
 </body>
 </html>

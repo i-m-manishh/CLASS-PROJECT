@@ -7,8 +7,10 @@
        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
-    
-    * {
+         html {
+    scroll-behavior: smooth;
+}
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -26,8 +28,7 @@
             background-color: #f4f4f4;
             color: #333;
         }
-
-    #navitems {
+        #navitems {
     background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
@@ -67,6 +68,7 @@ body.light-mode #navitems {
     transition: color 0.3s;
 }
 
+
 body.light-mode #navbar a {
     color: #333;
 }
@@ -80,13 +82,43 @@ body.light-mode #navbar a:hover {
     color: #f39c12;
     transform: translateY(-2px);
 }
-
 .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex: 1; 
+    justify-content: flex-end;
 }
 
+.search-bar1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar1 input {
+    padding: 8px;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    width: 200px; 
+}
+body.light-mode .search-bar1 input{
+    background-color: whitesmoke;
+}
+
+.search-bar1 button {
+    background-color: #f39c12;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar1 button:hover {
+    background-color: #e67e22;
+}
 .login {
     border: 1px solid white;
     padding: 10px 20px;
@@ -107,12 +139,10 @@ body.light-mode .login {
 body.light-mode .login a {
     color: #333;
 }
-
 .login:hover {
     background: #f39c12;
     border-color: #f39c12;
 }
-
 #theme-toggle {
     background: none;
     border: none;
@@ -125,12 +155,50 @@ body.light-mode .login a {
 body.light-mode #theme-toggle {
     color: #333;
 }
-
 #theme-toggle:hover {
     color: #f39c12;
     transform: scale(1.1);
 }
+.login {
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s;
+}
 
+body.light-mode .login {
+    border: 1px solid #333;
+}
+
+.login a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+body.light-mode .login a {
+    color: #333;
+}
+.login:hover {
+    background: #f39c12;
+    border-color: #f39c12;
+}
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+body.light-mode #theme-toggle {
+    color: #333;
+}
+#theme-toggle:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
 .support-section {
             padding: 100px 40px 40px;
             max-width: 1200px;
@@ -190,13 +258,13 @@ body.light-mode #theme-toggle {
             text-align: center;
         }
 
-        .search-bar {
+        .search-bar2 {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
 
-        .search-bar input {
+        .search-bar2 input {
             width: 100%;
             padding: 10px;
             border: 1px solid #f39c12;
@@ -205,12 +273,12 @@ body.light-mode #theme-toggle {
             color: white;
         }
 
-        body.light-mode .search-bar input {
+        body.light-mode .search-bar2 input {
             color: #333;
             border-color: #333;
         }
 
-        .search-bar button {
+        .search-bar2 button {
             padding: 10px 20px;
             background-color: #f39c12;
             border: none;
@@ -220,7 +288,7 @@ body.light-mode #theme-toggle {
             transition: background 0.3s;
         }
 
-        .search-bar button:hover {
+        .search-bar2 button:hover {
             background-color: #e67e22;
         }
 
@@ -244,9 +312,13 @@ body.light-mode #theme-toggle {
         }
 
         .support-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
         }
+        body.light-mode .support-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5); 
+                }
 
         .support-card h3 {
             font-family: 'Poppins', sans-serif;
@@ -390,7 +462,7 @@ body.light-mode #theme-toggle {
         }
 
         .video-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
         }
 
@@ -647,22 +719,28 @@ body.light-mode .copyright {
         <div id="navbar">
             <a href="Nexgen.html">Home</a>
             <a href="Shop.html">Shop</a>
-            <a href="about us.html">About Us</a>
-            <a href="support.html">Support</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Support.html">Support</a>
+            <a href="Delivery.html">Delivery</a>
+        </div>
+        <div class="search-bar1">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
         </div>
         <div class="login">
-            <a href="login.html">Login</a>
+            <a href="Login.html">Login</a>
         </div>
         <button id="theme-toggle" class="btn">🌙</button>
     </div>
 
+ 
     <div class="support-section">
         <h1>Support Center</h1>
         <p>Welcome to the NEXGEN Support Center. Here you'll find everything you need to get the most out of your gaming equipment. Whether you're looking for troubleshooting guides, warranty information, or just need to contact us, we're here to help.</p>
 
         <div class="knowledge-base">
             <h2>Knowledge Base</h2>
-            <div class="search-bar">
+            <div class="search-bar2">
                 <input type="text" placeholder="Search for articles, guides, and more...">
                 <button>Search</button>
             </div>
@@ -755,8 +833,9 @@ body.light-mode .copyright {
                 <h3>Quick Links</h3>
                 <a href="Nexgen.html">Home</a>
                 <a href="Shop.html">Shop</a>
-                <a href="about us.html">About Us</a>
-                <a href="support.html">Support</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Support.html">Support</a>
+                <a href="Delivery.html">Delivery</a>
             </div>
             <div class="footer-section">
                 <h3>Support</h3>
