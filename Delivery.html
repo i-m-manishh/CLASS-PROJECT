@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivery Information | NEXGEN</title>
+    <meta name="description" content="NEXGEN - Your ultimate destination for premium gaming peripherals. Shop the latest consoles, accessories, and more.">
+    <meta name="keywords" content="gaming, consoles, accessories, NEXGEN, PlayStation, Xbox, Nintendo">
+    <meta name="author" content="NEXGEN">
+    <meta property="og:title" content="Delivery Information | NEXGEN">
+    <meta property="og:description" content="NEXGEN - Your ultimate destination for premium gaming peripherals.">
+    <meta property="og:image" content="https://example.com/nexgen-logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-           * {
+        :root {
+            --primary-color: #f39c12;
+            --secondary-color: #e67e22;
+            --background-dark: #1a1a1a;
+            --background-light: #f4f4f4;
+            --text-dark: white;
+            --text-light: #333;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -17,17 +36,17 @@
 
         body {
             background-color: black;
-            color: white;
+            color: var(--text-dark);
             transition: background-color 0.3s, color 0.3s;
         }
 
         body.light-mode {
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--background-light);
+            color: var(--text-light);
         }
 
         #navitems {
-            background-color: #1a1a1a;
+            background-color: var(--background-dark);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -49,7 +68,7 @@
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
-            color: #f39c12;
+            color: var(--primary-color);
             font-weight: bold;
         }
 
@@ -60,22 +79,18 @@
         }
 
         #navbar a {
-            color: white;
+            color: var(--text-dark);
             font-size: 1.1rem;
             font-family: 'Poppins', sans-serif;
             transition: color 0.3s;
         }
 
         body.light-mode #navbar a {
-            color: #333;
+            color: var(--text-light);
         }
 
         #navbar a:hover {
-            color: #f39c12;
-            transform: translateY(-2px);
-        }
-        body.light-mode #navbar a:hover{
-            color: #f39c12;
+            color: var(--primary-color);
             transform: translateY(-2px);
         }
 
@@ -95,15 +110,15 @@
 
         .search-bar input {
             padding: 8px;
-            border: 1px solid #f39c12;
+            border: 1px solid var(--primary-color);
             border-radius: 5px;
-            background-color: #1a1a1a;
-            color: white;
+            background-color: var(--background-dark);
+            color: var(--text-dark);
             width: 200px;
         }
 
         .search-bar button {
-            background-color: #f39c12;
+            background-color: var(--primary-color);
             border: none;
             padding: 8px 12px;
             border-radius: 5px;
@@ -111,7 +126,7 @@
         }
 
         .search-bar button:hover {
-            background-color: #e67e22;
+            background-color: var(--secondary-color);
         }
 
         body.light-mode .search-bar input {
@@ -119,29 +134,29 @@
         }
 
         .login {
-            border: 1px solid white;
+            border: 1px solid var(--text-dark);
             padding: 10px 20px;
             border-radius: 5px;
             transition: background 0.3s, border-color 0.3s;
         }
 
         body.light-mode .login {
-            border: 1px solid #333;
+            border: 1px solid var(--text-light);
         }
 
         .login a {
-            color: white;
+            color: var(--text-dark);
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
         }
 
         body.light-mode .login a {
-            color: #333;
+            color: var(--text-light);
         }
 
         .login:hover {
-            background: #f39c12;
-            border-color: #f39c12;
+            background: var(--primary-color);
+            border-color: var(--primary-color);
         }
 
         #theme-toggle {
@@ -149,16 +164,16 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: white;
+            color: var(--text-dark);
             transition: color 0.3s;
         }
 
         body.light-mode #theme-toggle {
-            color: #333;
+            color: var(--text-light);
         }
 
         #theme-toggle:hover {
-            color: #f39c12;
+            color: var(--primary-color);
             transform: scale(1.1);
         }
 
@@ -170,24 +185,29 @@
 
         .delivery-container h1 {
             font-family: 'Orbitron', sans-serif;
-            color: white;
-            text-shadow: 0 0 10px #f39c12;
+            color: var(--text-dark);
+            text-shadow: 0 0 10px var(--primary-color);
             margin-bottom: 20px;
             font-size: 2.5rem;
             text-align: center;
         }
-        
-        body.light-mode .delivery-container h1 {
-            color: black;
-            text-shadow:0 0 10px #f39c12;
-        }
 
+        body.light-mode .delivery-container h1 {
+            color: var(--text-light);
+            text-shadow: 0 0 10px var(--primary-color);
+        }
 
         .delivery-section {
             margin-bottom: 30px;
             padding: 20px;
             background-color: #2c2c2c;
             border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .delivery-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5);
         }
 
         body.light-mode .delivery-section {
@@ -196,7 +216,7 @@
         }
 
         .delivery-section h2 {
-            color: darkorange;
+            color: var(--primary-color);
             font-size: 1.8rem;
             margin-bottom: 10px;
             display: flex;
@@ -225,221 +245,12 @@
         }
 
         .delivery-section a {
-            color: #f39c12;
+            color: var(--primary-color);
             text-decoration: underline;
         }
 
         .delivery-section a:hover {
-            color: #e67e22;
-        }
-
-        .map-container {
-            margin-top: 30px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-        }
-
-        footer {
-            background-color: #181818;
-            padding: 50px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        body.light-mode footer {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            text-align: left;
-            padding-bottom: 30px;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin: 10px;
-            padding: 10px;
-        }
-
-        .footer-section h3 {
-            color: #f39c12;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f39c12;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .footer-section h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: #f39c12;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f39c12;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            font-size: 0.9rem;
-            color: #f39c12;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        body.light-mode .footer-section p,
-        body.light-mode .footer-section a {
-            color: #333;
-        }
-
-        .footer-section a:hover {
-            color: #e67e22;
-            transform: translateX(5px);
-        }
-
-        .newsletter {
-            flex: 1 1 100%;
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .newsletter h3 {
-            color: #f39c12;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .newsletter p {
-            color: #f39c12;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        body.light-mode .newsletter p {
-            color: #333;
-        }
-
-        .newsletter form {
-            display: flex;
-            gap: 10px;
-        }
-
-        .newsletter input {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            outline: none;
-            border-radius: 5px 0 0 5px;
-            background-color: #333;
-            color: #f39c12;
-        }
-
-        body.light-mode .newsletter input {
-            background-color: #b5b5b5;
-            color: #333;
-        }
-
-        .newsletter button {
-            padding: 10px 15px;
-            border: none;
-            background-color: #f39c12;
-            color: black;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        .newsletter button:hover {
-            background-color: #e67e22;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #f39c12;
-            font-size: 1.5rem;
-            transition: 0.3s;
-        }
-
-        body.light-mode .social-icons a {
-            color: #333;
-        }
-
-        .social-icons a:hover {
-            color: #e67e22;
-            transform: scale(1.1);
-        }
-
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: #f39c12;
-            border-top: 1px solid #f39c12;
-            padding-top: 15px;
-        }
-
-        body.light-mode .copyright {
-            color: #333;
-        }
-
-        #scroll-to-top {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background-color: #f39c12;
-            color: black;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
-            transition: background 0.3s;
-        }
-
-        #scroll-to-top:hover {
-            background-color: #e67e22;
-        }
-
-        #live-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #f39c12;
-            color: black;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        #live-chat:hover {
-            background-color: #e67e22;
+            color: var(--secondary-color);
         }
         .buy-now-section {
             margin-top: 20px; 
@@ -541,32 +352,241 @@
             border-color: #f39c12;
             transform: translateY(-2px);
         }
+
+        .map-container {
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        footer {
+            background-color: #181818;
+            padding: 50px 20px;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        body.light-mode footer {
+            background-color: #f9f9f9;
+            color: var(--text-light);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+            padding-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        body.light-mode .footer-section p,
+        body.light-mode .footer-section a {
+            color: var(--text-light);
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .newsletter {
+            flex: 1 1 100%;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .newsletter h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        body.light-mode .newsletter p {
+            color: var(--text-light);
+        }
+
+        .newsletter form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px 0 0 5px;
+            background-color: #333;
+            color: var(--primary-color);
+        }
+
+        body.light-mode .newsletter input {
+            background-color: #b5b5b5;
+            color: var(--text-light);
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            border: none;
+            background-color: var(--primary-color);
+            color: black;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .newsletter button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        body.light-mode .social-icons a {
+            color: var(--text-light);
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            border-top: 1px solid var(--primary-color);
+            padding-top: 15px;
+        }
+
+        body.light-mode .copyright {
+            color: var(--text-light);
+        }
+
+        #scroll-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            transition: background 0.3s;
+        }
+
+        #scroll-to-top:hover {
+            background-color: var(--secondary-color);
+        }
+
+        #live-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #live-chat:hover {
+            background-color: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
-    <div id="navitems">
+    <header id="navitems">
         <div class="logo">NEXGEN</div>
-        <div id="navbar">
+        <nav id="navbar">
             <a href="Nexgen.html">Home</a>
             <a href="Shop.html">Shop</a>
             <a href="About Us.html">About Us</a>
             <a href="Support.html">Support</a>
             <a href="Delivery.html">Delivery</a>
-        </div>
+        </nav>
         <div class="search-bar">
             <input type="text" placeholder="Search products...">
-            <button><i class="fas fa-search"></i></button>
+            <button aria-label="Search"><i class="fas fa-search"></i></button>
         </div>
         <div class="login">
             <a href="Login.html">Login</a>
         </div>
-        <button id="theme-toggle" class="btn">🌙</button>
-    </div>
+        <button id="theme-toggle" class="btn" aria-label="Toggle theme">🌙</button>
+    </header>
 
-    <div class="delivery-container">
+    <main class="delivery-container">
         <h1>Delivery Information</h1>
 
-        <div class="delivery-section">
+        <section class="delivery-section">
             <h2><i class="fas fa-shipping-fast"></i>Shipping Options</h2>
             <p>Choose from our fast and reliable shipping options:</p>
             <ul>
@@ -574,9 +594,9 @@
                 <li><strong>Express:</strong> 2-3 business days</li>
                 <li><strong>Next-Day:</strong> Available in select areas</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="delivery-section">
+        <section class="delivery-section">
             <h2><i class="fas fa-map-marker-alt"></i>Delivery Locations in Nepal</h2>
             <p>We deliver to the following major cities and regions in Nepal:</p>
             <ul>
@@ -586,9 +606,9 @@
                 <li><strong>Chitwan:</strong> Narayangarh, Bharatpur, Ratnanagar</li>
                 <li><strong>Other Regions:</strong> Delivery available to most parts of Nepal</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="delivery-section">
+        <section class="delivery-section">
             <h2><i class="fas fa-phone-alt"></i>Office Contacts</h2>
             <p>For any inquiries, feel free to contact us:</p>
             <ul>
@@ -598,11 +618,11 @@
                 <li><strong>Email:</strong> info@nexgen.com.np</li>
                 <li><strong>Support:</strong> support@nexgen.com.np</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="buy-now-section">
+        <section class="buy-now-section">
             <h2><i class="fas fa-shopping-cart"></i>Buy Now</h2>
-            <form>
+            <form id="buy-now-form">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
@@ -630,16 +650,17 @@
 
                 <button type="submit">Proceed to Payment</button>
             </form>
-        </div>
+        </section>
 
         <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.456789012345!2d85.32395931531664!3d27.717245742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0x7f7b1a3b3b3b3b3b!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2snp!4v1633039290000!5m2!1sen!2snp"
                 allowfullscreen=""
-                loading="lazy">
+                loading="lazy"
+                aria-label="Nexgen Delivery Locations">
             </iframe>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="footer-container">
@@ -647,10 +668,10 @@
                 <h2>NEXGEN</h2>
                 <p>Your ultimate destination for premium gaming peripherals.</p>
                 <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -678,8 +699,8 @@
             <div class="footer-section newsletter">
                 <h3>Stay Updated</h3>
                 <p>Subscribe to our newsletter for exclusive deals and updates.</p>
-                <form>
-                    <input type="email" placeholder="Enter your email">
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
@@ -687,8 +708,8 @@
         <p class="copyright">© 2025 Nexgen. All Rights Reserved.</p>
     </footer>
 
-    <button id="scroll-to-top" title="Go to top">↑</button>
-    <button id="live-chat" title="Live Chat">💬</button>
+    <button id="scroll-to-top" title="Go to top" aria-label="Scroll to top">↑</button>
+    <button id="live-chat" title="Live Chat" aria-label="Live Chat">💬</button>
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
@@ -705,18 +726,9 @@
             body.classList.add('light-mode');
             themeToggle.textContent = '🌞';
         }
+
         const scrollToTopBtn = document.getElementById('scroll-to-top');
-        let prevScrollpos = window.pageYOffset;
-
         window.onscroll = function() {
-            const currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navitems").style.top = "0";
-            } else {
-                document.getElementById("navitems").style.top = "-80px";
-            }
-            prevScrollpos = currentScrollPos;
-
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 scrollToTopBtn.style.display = 'block';
             } else {
@@ -729,6 +741,16 @@
             document.documentElement.scrollTop = 0;
         });
 
+        document.getElementById('buy-now-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+
+        document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+        });
     </script>
+    
 </body>
 </html>

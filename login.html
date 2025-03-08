@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - NEXGEN</title>
+    <meta name="description" content="NEXGEN - Your ultimate destination for premium gaming peripherals. Shop the latest consoles, accessories, and more.">
+    <meta name="keywords" content="gaming, consoles, accessories, NEXGEN, PlayStation, Xbox, Nintendo">
+    <meta name="author" content="NEXGEN">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+                  html {
+    scroll-behavior: smooth;
+}
         * {
             margin: 0;
             padding: 0;
@@ -181,8 +187,10 @@ body.light-mode #theme-toggle {
         }
 
         body.light-mode .login-container {
-            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            background: rgb(235, 235, 235);
             border-color: rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, border-color 0.3s;
         }
 
         h2 {
