@@ -162,6 +162,103 @@ body.light-mode #theme-toggle {
     color: #f39c12;
     transform: scale(1.1);
 }
+
+.chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 400px;
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .chatbot-header {
+            background-color: #f39c12;
+            color: #0a0a0a;
+            padding: 15px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .chatbot-header button {
+            background: none;
+            border: none;
+            color: #0a0a0a;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .bot-message {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: #0a0a0a;
+            align-self: flex-end;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 10px;
+            background-color: #2c2c2c;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            color: #ffffff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background: #f39c12;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #0a0a0a;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background: #e67e22;
+        }
+
 .about-section {
                     padding: 120px 40px 50px;
                     max-width: 1400px;
@@ -735,6 +832,21 @@ body.light-mode .copyright {
     <button id="scroll-to-top" title="Go to top">↑</button>
     <button id="live-chat" title="Live Chat">💬</button>
 
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <h3>NexGen AI Chatbot</h3>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">Hello! Welcome to NexGen Gaming. How can I assist you today?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Type a message...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+
+
     <script>
       const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
@@ -790,6 +902,50 @@ body.light-mode .copyright {
                 alert('Thank you for your review!');
             }
         });
+
+        const liveChatBtn = document.getElementById('live-chat');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const closeChatbotBtn = document.getElementById('close-chatbot');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const sendMessageBtn = document.getElementById('send-message');
+
+
+        liveChatBtn.addEventListener('click', () => {
+            chatbotContainer.style.display = 'flex';
+        });
+
+        closeChatbotBtn.addEventListener('click', () => {
+            chatbotContainer.style.display = 'none';
+        });
+
+        function addMessage(message, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+            messageDiv.textContent = message;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        sendMessageBtn.addEventListener('click', () => {
+            const userMessage = chatbotInput.value.trim();
+            if (userMessage) {
+                addMessage(userMessage, true);
+                chatbotInput.value = '';
+
+                setTimeout(() => {
+                    addMessage("I'm here to help! What else can I do for you?", false);
+                }, 1000);
+            }
+        });
+
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessageBtn.click();
+            }
+        });
+        
     </script>
 </body>
 </html>

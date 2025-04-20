@@ -1,16 +1,17 @@
-<!-- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXGEN | Gaming Revolution</title> 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>NEXGEN | Gaming Revolution</title>
     <meta name="description" content="NEXGEN - Your ultimate destination for premium gaming peripherals. Shop the latest consoles, accessories, and more.">
     <meta name="keywords" content="gaming, consoles, accessories, NEXGEN, PlayStation, Xbox, Nintendo">
     <meta name="author" content="NEXGEN">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-             html {
+         html {
     scroll-behavior: smooth;
 }
          * {
@@ -162,328 +163,71 @@ body.light-mode #theme-toggle {
     color: #f39c12;
     transform: scale(1.1);
 }
-
-.bgimage {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    color: white;
-}
-.bgimage-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    z-index: 1;
-}
-body.light-mode .bgimage-overlay {
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
-            color: #333;
-        }
-
-.bgimage-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.bgimage-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.bgimage-item.active {
-    opacity: 1;
-}
-
-.content {
-    position: relative;
-    top: 250px;
-    z-index: 2;
-    text-align: center;
-}
-.content h2 {
-            font-size: 2.5rem;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px #f39c12;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 1.2rem;
-            font-family: 'Lato', sans-serif;
-            margin-bottom: 30px;
-        }
-        body.light-mode .content h2 {
-            text-shadow: 0 0 10px #f39c12;
-            color: black;
-        }
-        body.light-mode .content p{
-            color: black;
-        }
-        .btn {
-            padding: 10px 25px;
-            background: #f39c12;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn a {
-            color: white;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .btn:hover {
-            background: #d67d00;
-        }
-        .products {
-            background-color: #1a1a1a;
+        .showcase {
             padding: 50px 20px;
             text-align: center;
+            background-color:#181818;
+            width: 100%;
+            height: cover ;
         }
 
-        body.light-mode .products {
-            background-color: #fff;
-            color: #333;
-        }
-
-        .products h1 {
-            font-size: 2.5rem;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 40px;
-            text-shadow: 0 0 10px #f39c12;
+        body.light-mode .showcase {
+            background-color: #e0e0e0;
         }
 
         .product-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 50px;
+            justify-content: space-around;
+            gap: 30px;
         }
-        .product-card:hover{
+
+        .product {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        body.light-mode .product {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product:hover {
             transform: translateY(-10px);
             box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
         }
-        body.light-mode .product-card:hover {
+        body.light-mode .product:hover {
                     transform: translateY(-10px);
                     box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5); 
                 }
 
-        .product-card {
-    background-color: #222;
-    border-radius: 10px;
-    width: 300px; 
-    height: 450px; 
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; 
-}
-
-
-        body.light-mode .product-card {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-
-        .product-card img {
+        .product img {
             width: 100%;
-            height: 38%;
-            max-width: 250px;
+            height: 180px;
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .product-card h3 {
-    color: #f39c12;
-    font-size: 1.1rem;
-    margin: 10px 0;
-    font-family: 'Poppins', sans-serif;
-}
+        .product h3 {
+            font-size: 24px;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
 
-.product-card p {
-    color: white;
-    font-size: 0.8rem;
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    flex-grow: 1; 
-}
+        .product p {
+            font-size: 16px;
+            color: #f4f4f4;
+            margin-bottom: 20px;
+        }
 
-
-        body.light-mode .product-card p {
+        body.light-mode .product p {
             color: #333;
         }
-        .product-card .price {
-    color: #f39c12;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.product-card .rating {
-    color: #f39c12;
-    margin-bottom: 15px;
-}
-
-.product-card .rating i {
-    font-size: 1.2rem;
-}
-.product-card .buy-now-btn {
-    padding: 10px 20px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-}
-
-.product-card .buy-now-btn:hover {
-    background-color: #e67e22;
-}
-
-body.light-mode .product-card {
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-body.light-mode .product-card p {
-    color: #333;
-}
-
-body.light-mode .product-card .price {
-    color: #f39c12;
-}
-
-body.light-mode .product-card .rating {
-    color: #f39c12;
-}
-        .featured{
-            background-color: rgb(17, 16, 16);
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .featured h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px #f39c12;
-        }
-body.light-mode .featured h2{
-    color: black;
-            text-shadow: 0 0 10px #f39c12;
-}
-.featured-product {
-    background-color: #222;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 500px; 
-}
-    .featured-products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
-}
-body.light-mode .featured {
-            background-color: whitesmoke;
-            color: #333;
-        }
-
-body.light-mode .featured-product {
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.featured-product:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-}
-body.light-mode .featured-product:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.5); 
-                }
-.featured-product img {
-    width: 100%;
-    height: 38%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.featured-details h3 {
-    color: #f39c12;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.featured-details p {
-    color: white;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-
-body.light-mode .featured-details p {
-    color: #333;
-}
-
-.featured-details .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f39c12;
-    margin-bottom: 20px;
-}
-
-.featured-details button {
-    background-color: #f39c12;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.featured-details button:hover {
-    background-color: #e67e22;
-}
-
-.featured-details button a {
-    color: #1a1a1a;
-    text-decoration: none;
-}
-
-.rating {
+        .rating {
     color: #f39c12;
     margin-bottom: 15px;
 }
@@ -491,284 +235,221 @@ body.light-mode .featured-details p {
 .rating i {
     font-size: 1.2rem;
 }
-.show-more-container {
-    text-align: center;
-    margin-top: 30px;
-}
-.show-more-container {
-    text-align: center;
-    margin-top: 30px;
-}
 
-.show-more-container .btn {
-    padding: 10px 30px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
+        .product button {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.show-more-container .btn:hover {
-    background-color: #e67e22;
-}
-        .reviews-container {
-            background-color: #1a1a1a;
+        .product button:hover {
+            background-color: #e67e22;
+        }
+        .product .price {
+            font-size: 1.2rem;
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .show-more-btn,
+        .show-less-btn {
+            background-color: #f39c12;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .show-more-btn:hover,
+        .show-less-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .show-less-btn {
+            margin-left: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+   footer {
+            background-color: #181818;
             padding: 50px 20px;
             text-align: center;
+            color: white;
         }
 
-        body.light-mode .reviews-container {
-            background-color: #fff;
-            color: #333;
-        }
-
-        .reviews-container h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px #f39c12;
-        }
-
-        .review-card {
-            background-color: #222;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-            margin-bottom: 20px;
-        }
-
-        body.light-mode .review-card {
+        body.light-mode footer {
             background-color: #f9f9f9;
             color: #333;
         }
 
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: left;
+            padding-bottom: 30px;
         }
 
-        .review-header {
-            display: flex;
-            align-items: center;
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .footer-section h3 {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: #f39c12;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.9rem;
+            color: #f39c12;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        body.light-mode .footer-section p,
+        body.light-mode .footer-section a {
+            color: #333;
+        }
+
+        .footer-section a:hover {
+            color: #e67e22;
+            transform: translateX(5px);
+        }
+
+        .newsletter {
+            flex: 1 1 100%;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .newsletter h3 {
+            color: #f39c12;
+            font-size: 1.2rem;
             margin-bottom: 10px;
         }
 
-        .user-avatar {
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
-        }
-
-        .user-info {
-            color: #aaa;
-        }
-
-        body.light-mode .user-info {
-            color: #666;
-        }
-
-        .user-name {
-            font-weight: bold;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        body.light-mode .user-name {
-            color: #333;
-        }
-
-        .user-location {
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        .review-content {
-            color: #ddd;
+        .newsletter p {
+            color: #f39c12;
             font-size: 0.9rem;
-            line-height: 1.5;
+            margin-bottom: 15px;
         }
 
-        body.light-mode .review-content {
+        body.light-mode .newsletter p {
             color: #333;
         }
 
-        .map-container {
-            margin-top: 50px;
-            width: 100%;
-            height: 400px;
-            background-color: #333;
+        .newsletter form {
+            display: flex;
+            gap: 10px;
         }
 
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
+        .newsletter input {
+            width: 700px;
+            padding: 10px;
             border: none;
+            outline: none;
+            border-radius: 5px 0 0 5px;
+            background-color: #333;
+            color: #f39c12;
         }
 
-        footer {
-    background-color: #181818;
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
-}
+        body.light-mode .newsletter input {
+            background-color: #b5b5b5;
+            color: #333;
+        }
 
-body.light-mode footer {
-    background-color: #f9f9f9;
-    color: #333;
-}
+        .newsletter button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #f39c12;
+            color: black;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: 0.3s;
+            font-weight: bold;
+        }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
-    padding-bottom: 30px; 
-}
+        .newsletter button:hover {
+            background-color: #e67e22;
+        }
 
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-    padding: 10px;
-}
+        .social-icons {
+            margin-top: 20px;
+        }
 
-.footer-section h3 {
-    color: #f39c12;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #f39c12;
-    display: inline-block;
-    padding-bottom: 5px;
-}
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #f39c12;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
 
-.footer-section h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    color: #f39c12;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #f39c12;
-    display: inline-block;
-    padding-bottom: 5px;
-}
+        body.light-mode .social-icons a {
+            color: #333;
+        }
 
-.footer-section p,
-.footer-section a {
-    font-size: 0.9rem;
-    color: #f39c12;
-    text-decoration: none;
-    display: block;
-    margin: 5px 0;
-    transition: 0.3s;
-}
+        .social-icons a:hover {
+            color: #e67e22;
+            transform: scale(1.1);
+        }
 
-body.light-mode .footer-section p,
-body.light-mode .footer-section a {
-    color: #333;
-}
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #f39c12;
+            border-top: 1px solid #f39c12;
+            padding-top: 15px;
+        }
 
-.footer-section a:hover {
-    color: #e67e22;
-    transform: translateX(5px);
-}
+        body.light-mode .copyright {
+            color: #333;
+        }
 
-.newsletter {
-    flex: 1 1 100%; 
-    margin-top: 20px;
-    text-align: left; 
-}
-
-.newsletter h3 {
-    color: #f39c12;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.newsletter p {
-    color: #f39c12;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-body.light-mode .newsletter p {
-    color: #333;
-}
-
-.newsletter form {
-    display: flex;
-    gap: 10px;
-}
-
-.newsletter input {
-    width: 700px; 
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px 0 0 5px;
-    background-color: #333;
-    color: #f39c12;
-}
-
-body.light-mode .newsletter input {
-    background-color: #b5b5b5;
-    color: #333;
-}
-
-.newsletter button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #f39c12;
-    color: black;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.newsletter button:hover {
-    background-color: #e67e22;
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #f39c12;
-    font-size: 1.5rem;
-    transition: 0.3s;
-}
-
-body.light-mode .social-icons a {
-    color: #333;
-}
-
-.social-icons a:hover {
-    color: #e67e22;
-    transform: scale(1.1);
-}
-
-.copyright {
-    margin-top: 30px;
-    font-size: 0.8rem;
-    color: #f39c12;
-    border-top: 1px solid #f39c12;
-    padding-top: 15px;
-}
-
-body.light-mode .copyright {
-    color: #333;
-}
-#scroll-to-top {
+        #scroll-to-top {
             position: fixed;
             bottom: 80px;
             right: 20px;
@@ -806,11 +487,337 @@ body.light-mode .copyright {
         #live-chat:hover {
             background-color: #e67e22;
         }
+        .payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .payment-content {
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #f39c12;
+        }
+
+        body.light-mode .payment-content {
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #f39c12;
+            transition: transform 0.3s;
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg);
+        }
+
+        .payment-header {
+            margin-bottom: 25px;
+        }
+
+        .payment-header h2 {
+            color: #f39c12;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .payment-header p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        body.light-mode .payment-header p {
+            color: #666;
+        }
+
+        .selected-product-info {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            gap: 20px;
+        }
+
+        body.light-mode .selected-product-info {
+            background-color: #f4f4f4;
+        }
+
+        .selected-product-info img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .selected-product-details h3 {
+            color: #f39c12;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .selected-product-details p {
+            color: #aaa;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        body.light-mode .selected-product-details p {
+            color: #666;
+        }
+
+        .payment-options-container {
+            margin-top: 20px;
+        }
+
+        .payment-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .payment-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #aaa;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .payment-tab.active {
+            color: #f39c12;
+            border-bottom: 3px solid #f39c12;
+        }
+
+        .payment-tab:hover:not(.active) {
+            color: #ddd;
+        }
+
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .payment-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        body.light-mode .payment-option {
+            background-color: #f4f4f4;
+        }
+
+        .payment-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+            border-color: #f39c12;
+        }
+
+        .payment-option img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        .payment-option h3 {
+            color: #f39c12;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .payment-option p {
+            color: #aaa;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        body.light-mode .payment-option p {
+            color: #666;
+        }
+
+        .payment-form {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .payment-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        body.light-mode .form-group label {
+            color: #666;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: white;
+            font-size: 1rem;
+        }
+
+        body.light-mode .form-group input {
+            background-color: white;
+            color: #333;
+            border-color: #ddd;
+        }
+
+        .payment-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #f39c12;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .payment-submit:hover {
+            background-color: #e67e22;
+        }
+
+        .payment-success {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .payment-success i {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .payment-success h3 {
+            color: #f39c12;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .payment-success p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        body.light-mode .payment-success p {
+            color: #666;
+        }
+
+        .continue-shopping {
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .continue-shopping:hover {
+            background-color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .payment-content {
+                padding: 20px;
+            }
+            
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .selected-product-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .payment-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .payment-tab {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .payment-content {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            .payment-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .selected-product-info {
+                padding: 15px;
+            }
+        }
 
     </style>
 </head>
 <body>
-
     <div id="navitems">
         <div class="logo">NEXGEN</div>
         <div id="navbar">
@@ -830,1635 +837,367 @@ body.light-mode .copyright {
         <button id="theme-toggle" class="btn">🌙</button>
     </div>
 
-    <div class="bgimage" id="bgimage">
-        <div class="bgimage-overlay"></div>
-        <div class="bgimage-inner">
-            <div class="bgimage-item active" style="background-image: url('bg1.jpg');"></div>
-            <div class="bgimage-item" style="background-image: url('bg2.png');"></div>
-        </div>
-        <div class="content">
-            <h2>Level Up Your Game</h2>
-            <p>Experience next-gen graphics and performance</p>
-            <button class="btn"><a href="Shop.html">Shop Now</a></button>
-        </div>
-    </div>
-    <div class="products">
-        <h1>Top Products</h1>
-        <div class="product-container">
-            <div class="product-card">
-                <img src="ps5.png" alt="PlayStation 5">
-                <h3>PlayStation 5</h3>
-                <p>Next-gen console with stunning graphics and fast load times.</p>
-                <p class="price"> NPR 66,498.67 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
+    <div class="showcase">
+        <div class="product-container" id="productList">
+            
+            <div class="product">
+                <img src="Logitech.png" alt="Logitech G502">
+                <h3>Logitech G502</h3>
+                <p>A popular high-performance gaming mouse with customizable weights.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 10,638.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="product-card">
-                <img src="xbox.png" alt="Xbox Series X">
-                <h3>Xbox Series X</h3>
-                <p>Powerful performance with 4K resolution and expansive game library.</p>
-                <p class="price"> NPR 66,498.67</p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                </div>
-                <button class="buy-now-btn">Buy Now</button>
-            </div>
-            <div class="product-card">
-                <img src="nintendo.png" alt="Nintendo Switch">
-                <h3>Nintendo Switch</h3>
-                <p>Hybrid console for gaming at home or on the go.</p>
-                <p class="price">NPR 39,898.67 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
-                <button class="buy-now-btn">Buy Now</button>
-            </div>
-            <div class="product-card">
-                <img src="Apple Vision Pro.png" alt="Virtual Reality">
-                <h3>Apple Vision Pro</h3>
-                <p>Seamless blend of digital content, offering an unparalleled spatial computing experience</p>
-                <p class="price"> NPR 66,500 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
-                <button class="buy-now-btn">Buy Now</button>
-            </div>
-            <div class="product-card">
-                <img src="RTX.png" alt="GeForce RTX 5090 GPU">
-                <h3>GeForce RTX 5090 GPU</h3>
-                <p>The RTX 5090's DLSS 4.0 enables ultra-smooth AI-powered 8K gaming.</p>
-                <p class="price">NPR 265,998.67</p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                </div>
-                <button class="buy-now-btn">Buy Now</button>
-            </div>
-            <div class="product-card">
-                <img src="Asus 16.png" alt="Asus ROG G16">
-                <h3>Asus ROG G16</h3>
-                <p>16" 2.5K OLED display, 240Hz, 0.2ms, 100% DCI-P3, Pantone Validated, G-Sync, Dolby Vision HDR</p>
-                <p class="price">NPR 332,498.67 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
-                <button class="buy-now-btn">Buy Now</button>
-            </div>
-        </div>
-    </div>
-    <div class="featured">
-        <h2>Featured Products</h2>
-        <div class="featured-products-container">
-            <div class="featured-product">
-                <img src="Secretlab Titan .png" alt="Gaming Chair">
-                <div class="featured-details">
-                    <h3>Secretlab Titan Evo</h3>
-                    <p>4-Way L-ADAPT™ Lumbar Support System for personalized lower back support.</p>
-                    <p class="price">NPR 73,017 </p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="HyperX Cloud.png" alt="Gaming Headset">
-                <div class="featured-details">
-                    <h3>HyperX Cloud Alpha</h3>
-                    <p>300-hour battery life, DTS Headphone:X spatial audio, durable aluminum frame and noise-cancelling mic.</p>
-                    <p class="price">NPR 10,372.67</p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="Logitech .png" alt="Gaming Keyboard">
-                <div class="featured-details">
-                    <h3>Logitech G915</h3>
-                    <p>A wireless mechanical gaming keyboard with RGB lighting.</p>
-                    <p class="price">NPR 33,248.67</p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="Razer DeathAdder.png" alt="Gaming Mouse">
-                <div class="featured-details">
-                    <h3>Razer DeathAdder V3</h3>
-                    <p>Superb ergonomics, pin-sharp wireless performance, and accurate sensor.</p>
-                    <p class="price">NPR 13,298.67 </p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="MSI MPG .png" alt="Gaming Monitor">
-                <div class="featured-details">
-                    <h3>MSI MPG 321URX QD-OLED</h3>
-                    <p>4K display features a stunning OLED panel, offering vibrant colors and deep blacks.</p>
-                    <p class="price">NPR 119,698.67 </p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="SecretLab Magnus.png" alt="Gaming Desk">
-                <div class="featured-details">
-                    <h3>SecretLab Magnus Pro</h3>
-                    <p>precision electric height adjustment with a fully-integrated power supply column</p>
-                    <p class="price">NPR 106,267</p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="show-more-container">
-            <a href="Shop.html" class="btn">Show More</a>
-        </div>
-    </div>
-
-    <div class="reviews-container">
-        <h2>Customer Reviews</h2>
-        <div class="review-card">
-            <div class="review-header">
-                <img src="sir1.png" alt="User 1" class="user-avatar">
-                <div class="user-info">
-                    <p class="user-name"></p>
-                    <p class="user-location"></p>
-                </div>
-            </div>
-            <div class="review-content">
-                <p class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></p>
-                <p class="review-text">Great gaming mouse, super responsive and comfortable for long hours of play!</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://via.placeholder.com/50" alt="User 2" class="user-avatar">
-                <div class="user-info">
-                    <p class="user-name"></p>
-                    <p class="user-location"></p>
-                </div>
-            </div>
-            <div class="review-content">
-                <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></p>
-                <p class="review-text">The keyboard is amazing! RGB lights look awesome and keys feel perfect for gaming.</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://via.placeholder.com/50" alt="User 3" class="user-avatar">
-                <div class="user-info">
-                    <p class="user-name"></p>
-                    <p class="user-location"></p>
-                </div>
-            </div>
-            <div class="review-content">
-                <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i><i>&#9734;</i></p>
-                <p class="review-text">Headset is comfy but the sound could be improved. Good for long gaming sessions though!</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://via.placeholder.com/50" alt="User 4" class="user-avatar">
-                <div class="user-info">
-                    <p class="user-name"></p>
-                    <p class="user-location"></p>
-                </div>
-            </div>
-            <div class="review-content">
-                <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></p>
-                <p class="review-text">Excellent controller! Durable, responsive, and has a great grip. Perfect for intense gaming.</p>
-            </div>
-        </div>
-
     
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7194846.440313512!2d78.83421881777386!3d28.295033798895716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995e8c77d2e68cf%3A0x34a29abcd0cc86de!2sNepal!5e0!3m2!1sen!2snp!4v1741495489263!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h2>NEXGEN</h2>
-                <p>Your ultimate destination for premium gaming peripherals.</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="Nexgen.html">Home</a>
-                <a href="Shop.html">Shop</a>
-                <a href="about us.html">About Us</a>
-                <a href="support.html">Support</a>
-                <a href="Delivery.html">Delivery</a>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <a href="#">Help Center</a>
-                <a href="#">Warranty</a>
-                <a href="#">FAQs</a>
-                <a href="#">Track Order</a>
-            </div>
-            <div class="footer-section">
-                <h3>Policies</h3>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Refund Policy</a>
-                <a href="#">Shipping Info</a>
-            </div>
-            <div class="footer-section newsletter">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to our newsletter for exclusive deals and updates.</p>
-                <form>
-                    <input type="email" placeholder="Enter your email">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <p class="copyright">© 2025 Nexgen. All Rights Reserved.</p>
-    </footer>
-
-    <button id="scroll-to-top" title="Go to top">↑</button>
-     <button id="live-chat" title="Live Chat">💬</button> 
-
-  
-    </script>
-</body>
-</html> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXGEN | Gaming Revolution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <meta name="description" content="NEXGEN - Your ultimate destination for premium gaming peripherals. Shop the latest consoles, accessories, and more.">
-    <meta name="keywords" content="gaming, consoles, accessories, NEXGEN, PlayStation, Xbox, Nintendo">
-    <meta name="author" content="NEXGEN">
-    <style>
-        :root {
-            --primary-color: #f39c12;
-            --primary-hover: #e67e22;
-            --dark-bg: #1a1a1a;
-            --dark-card: #222;
-            --dark-text: #ddd;
-            --light-bg: #f4f4f4;
-            --light-card: #f9f9f9;
-            --light-text: #333;
-            --transition: all 0.3s ease;
-        }
-       
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            font-family: 'Lato', sans-serif;
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            transition: var(--transition);
-            line-height: 1.6;
-        }
-
-        body.light-mode {
-            background-color: var(--light-bg);
-            color: var(--light-text);
-        }
-
-        /* Navigation */
-        #navitems {
-            background-color: var(--dark-bg);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 70px;
-            z-index: 1000;
-            padding: 0 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            transition: var(--transition);
-        }
-
-        body.light-mode #navitems {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        #navbar {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        #navbar a {
-            color: white;
-            font-size: 0.9rem;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-            padding: 5px 0;
-        }
-
-        body.light-mode #navbar a {
-            color: var(--light-text);
-        }
-
-        #navbar a:hover {
-            color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            justify-content: flex-end;
-        }
-
-        .search-bar {
-            display: none; /* Hidden by default on mobile */
-            align-items: center;
-            gap: 8px;
-        }
-
-        .search-bar input {
-            padding: 8px;
-            border: 1px solid var(--primary-color);
-            border-radius: 5px;
-            background-color: var(--dark-bg);
-            color: white;
-            width: 150px;
-        }
-
-        .search-bar button {
-            background-color: var(--primary-color);
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .search-bar button:hover {
-            background-color: var(--primary-hover);
-        }
-
-        body.light-mode .search-bar input {
-            background-color: whitesmoke;
-            color: var(--light-text);
-        }
-
-        .login {
-            border: 1px solid white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
-
-        body.light-mode .login {
-            border: 1px solid var(--light-text);
-        }
-
-        .login a {
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
-        }
-
-        body.light-mode .login a {
-            color: var(--light-text);
-        }
-
-        .login:hover {
-            background: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        #theme-toggle {
-            background: none;
-            border: none;
-            font-size: 1.3rem;
-            cursor: pointer;
-            color: white;
-            transition: var(--transition);
-            padding: 5px;
-        }
-
-        body.light-mode #theme-toggle {
-            color: var(--light-text);
-        }
-
-        #theme-toggle:hover {
-            color: var(--primary-color);
-            transform: scale(1.1);
-        }
-
-        /* Mobile menu toggle */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        body.light-mode .mobile-menu-toggle {
-            color: var(--light-text);
-        }
-
-        /* Hero Section */
-        .bgimage {
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            color: white;
-            margin-top: 70px; /* Account for fixed navbar */
-        }
-
-        .bgimage-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-            z-index: 1;
-        }
-
-        body.light-mode .bgimage-overlay {
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
-        }
-
-        .bgimage-inner {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .bgimage-item {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .bgimage-item.active {
-            opacity: 1;
-        }
-
-        .content {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .content h2 {
-            font-size: 2rem;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        body.light-mode .content h2 {
-            color: black;
-        }
-
-        .content p {
-            font-size: 1rem;
-            font-family: 'Lato', sans-serif;
-            margin-bottom: 25px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        body.light-mode .content p {
-            color: black;
-        }
-
-        .btn {
-            padding: 10px 25px;
-            background: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-block;
-        }
-
-        .btn a {
-            color: white;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .btn:hover {
-            background: var(--primary-hover);
-            transform: translateY(-3px);
-        }
-
-        /* Products Section */
-        .products {
-            background-color: var(--dark-bg);
-            padding: 50px 15px;
-            text-align: center;
-        }
-
-        body.light-mode .products {
-            background-color: #fff;
-        }
-
-        .products h1 {
-            font-size: 2rem;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 30px;
-            text-shadow: 0 0 10px var(--primary-color);
-        }
-
-        .product-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background-color: var(--dark-card);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
-        }
-
-        body.light-mode .product-card {
-            background-color: var(--light-card);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
-        }
-
-        .product-card img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            object-fit: contain;
-        }
-
-        .product-card h3 {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin: 10px 0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .product-card p {
-            color: white;
-            font-size: 0.9rem;
-            font-family: 'Lato', sans-serif;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            flex-grow: 1;
-        }
-
-        body.light-mode .product-card p {
-            color: var(--light-text);
-        }
-
-        .product-card .price {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .product-card .rating {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .product-card .rating i {
-            font-size: 1rem;
-        }
-
-        .product-card .buy-now-btn {
-            padding: 8px 15px;
-            background-color: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 10px;
-            font-size: 0.9rem;
-            font-family: 'Poppins', sans-serif;
-            color: black;
-            width: 100%;
-            max-width: 150px;
-        }
-
-        .product-card .buy-now-btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* Featured Section */
-        .featured {
-            background-color: rgb(17, 16, 16);
-            padding: 50px 15px;
-            text-align: center;
-        }
-
-        body.light-mode .featured {
-            background-color: whitesmoke;
-        }
-
-        .featured h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px var(--primary-color);
-        }
-
-        body.light-mode .featured h2 {
-            color: black;
-        }
-
-        .featured-product {
-            background-color: var(--dark-card);
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-
-        .featured-products-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        body.light-mode .featured-product {
-            background-color: var(--light-card);
-        }
-
-        .featured-product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
-        }
-
-        .featured-product img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 10px;
-            margin: 0 auto 15px;
-            object-fit: contain;
-        }
-
-        .featured-details h3 {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .featured-details p {
-            color: white;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        body.light-mode .featured-details p {
-            color: var(--light-text);
-        }
-
-        .featured-details .price {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .featured-details button {
-            background-color: var(--primary-color);
-            border: none;
-            padding: 8px 15px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: var(--transition);
-            width: 100%;
-            max-width: 150px;
-            margin: 0 auto;
-        }
-
-        .featured-details button:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .featured-details button a {
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-
-        .rating {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .rating i {
-            font-size: 1rem;
-        }
-
-        .show-more-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .show-more-container .btn {
-            padding: 10px 30px;
-            background-color: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .show-more-container .btn:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* Reviews Section */
-        .reviews-container {
-            background-color: var(--dark-bg);
-            padding: 50px 15px;
-            text-align: center;
-        }
-
-        body.light-mode .reviews-container {
-            background-color: #fff;
-        }
-
-        .reviews-container h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px var(--primary-color);
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .review-card {
-            background-color: var(--dark-card);
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: var(--transition);
-        }
-
-        body.light-mode .review-card {
-            background-color: var(--light-card);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-        }
-
-        .review-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .user-avatar {
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
-            object-fit: cover;
-        }
-
-        .user-info {
-            color: #aaa;
-            text-align: left;
-        }
-
-        body.light-mode .user-info {
-            color: #666;
-        }
-
-        .user-name {
-            font-weight: bold;
-            color: #fff;
-            font-size: 0.9rem;
-        }
-
-        body.light-mode .user-name {
-            color: var(--light-text);
-        }
-
-        .user-location {
-            font-size: 0.7rem;
-            color: #999;
-        }
-
-        .review-content {
-            color: #ddd;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            text-align: left;
-        }
-
-        body.light-mode .review-content {
-            color: var(--light-text);
-        }
-
-        .map-container {
-            margin-top: 50px;
-            width: 100%;
-            height: 300px;
-            background-color: #333;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #181818;
-            padding: 40px 15px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        body.light-mode footer {
-            background-color: #f9f9f9;
-            color: var(--light-text);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: left;
-            padding-bottom: 30px;
-        }
-
-        .footer-section {
-            padding: 10px;
-        }
-
-        .footer-section h3 {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .footer-section h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            font-size: 0.8rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            display: block;
-            margin: 8px 0;
-            transition: var(--transition);
-        }
-
-        body.light-mode .footer-section p,
-        body.light-mode .footer-section a {
-            color: var(--light-text);
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-hover);
-            transform: translateX(5px);
-        }
-
-        .newsletter {
-            grid-column: 1 / -1;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .newsletter h3 {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .newsletter p {
-            color: var(--primary-color);
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
-
-        body.light-mode .newsletter p {
-            color: var(--light-text);
-        }
-
-        .newsletter form {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .newsletter input {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            outline: none;
-            border-radius: 5px 0 0 5px;
-            background-color: #333;
-            color: var(--primary-color);
-            font-size: 0.8rem;
-        }
-
-        body.light-mode .newsletter input {
-            background-color: #e0e0e0;
-            color: var(--light-text);
-        }
-
-        .newsletter button {
-            padding: 10px 15px;
-            border: none;
-            background-color: var(--primary-color);
-            color: black;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-            transition: var(--transition);
-            font-weight: bold;
-            font-size: 0.8rem;
-        }
-
-        .newsletter button:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-icons a {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-
-        body.light-mode .social-icons a {
-            color: var(--light-text);
-        }
-
-        .social-icons a:hover {
-            color: var(--primary-hover);
-            transform: scale(1.1);
-        }
-
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.7rem;
-            color: var(--primary-color);
-            border-top: 1px solid var(--primary-color);
-            padding-top: 15px;
-        }
-
-        body.light-mode .copyright {
-            color: var(--light-text);
-        }
-
-        /* Floating Buttons */
-        #scroll-to-top {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background-color: var(--primary-color);
-            color: black;
-            border: none;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            font-size: 1.3rem;
-            cursor: pointer;
-            display: none;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        #scroll-to-top:hover {
-            background-color: var(--primary-hover);
-        }
-
-        #live-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--primary-color);
-            color: black;
-            border: none;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        #live-chat:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* Chatbot */
-        .chatbot-container {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 90%;
-            max-width: 350px;
-            background-color: var(--dark-bg);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            display: none;
-            flex-direction: column;
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        body.light-mode .chatbot-container {
-            background-color: var(--light-card);
-        }
-
-        .chatbot-header {
-            background-color: var(--primary-color);
-            color: #0a0a0a;
-            padding: 12px;
-            border-radius: 15px 15px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .chatbot-header h3 {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .chatbot-header button {
-            background: none;
-            border: none;
-            color: #0a0a0a;
-            font-size: 1.3rem;
-            cursor: pointer;
-        }
-
-        .chatbot-messages {
-            flex: 1;
-            padding: 12px;
-            overflow-y: auto;
-            max-height: 250px;
-        }
-
-        .message {
-            padding: 8px 12px;
-            border-radius: 10px;
-            margin-bottom: 8px;
-            max-width: 80%;
-            word-wrap: break-word;
-            font-size: 0.9rem;
-        }
-
-        .bot-message {
-            background-color: #2c2c2c;
-            color: #ffffff;
-            align-self: flex-start;
-        }
-
-        body.light-mode .bot-message {
-            background-color: #e0e0e0;
-            color: var(--light-text);
-        }
-
-        .user-message {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
-            color: #0a0a0a;
-            align-self: flex-end;
-        }
-
-        .chatbot-input {
-            display: flex;
-            padding: 8px;
-            background-color: #2c2c2c;
-            border-radius: 0 0 15px 15px;
-        }
-
-        body.light-mode .chatbot-input {
-            background-color: #e0e0e0;
-        }
-
-        .chatbot-input input {
-            flex: 1;
-            padding: 8px;
-            border: none;
-            background: transparent;
-            color: #ffffff;
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        body.light-mode .chatbot-input input {
-            color: var(--light-text);
-        }
-
-        .chatbot-input button {
-            background: var(--primary-color);
-            border: none;
-            padding: 8px 12px;
-            border-radius: 10px;
-            cursor: pointer;
-            color: #0a0a0a;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .chatbot-input button:hover {
-            background: var(--primary-hover);
-        }
-
-        /* Responsive Adjustments */
-        @media (min-width: 576px) {
-            .logo {
-                font-size: 1.8rem;
-            }
-            
-            #navbar {
-                gap: 20px;
-            }
-            
-            #navbar a {
-                font-size: 1rem;
-            }
-            
-            .search-bar {
-                display: flex;
-            }
-            
-            .content h2 {
-                font-size: 2.5rem;
-            }
-            
-            .content p {
-                font-size: 1.2rem;
-            }
-            
-            .products h1, .featured h2, .reviews-container h2 {
-                font-size: 2.5rem;
-            }
-            
-            .product-container, .featured-products-container {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
-            
-            .footer-container {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            }
-            
-            .newsletter {
-                text-align: left;
-            }
-            
-            .newsletter form {
-                justify-content: flex-start;
-            }
-        }
-
-        @media (min-width: 768px) {
-            #navitems {
-                padding: 0 40px;
-            }
-            
-            .nav-right {
-                gap: 20px;
-            }
-            
-            .search-bar input {
-                width: 200px;
-            }
-            
-            .product-container, .featured-products-container {
-                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            }
-            
-            .reviews-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-container {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .newsletter {
-                grid-column: span 2;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .reviews-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .footer-container {
-                grid-template-columns: repeat(5, 1fr);
-            }
-            
-            .newsletter {
-                grid-column: span 1;
-            }
-        }
-
-        @media (max-width: 575px) {
-            /* Mobile menu styles */
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            #navbar {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--dark-bg);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                gap: 15px;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-                transform: translateY(-150%);
-                transition: transform 0.3s ease;
-                z-index: 999;
-            }
-            
-            body.light-mode #navbar {
-                background-color: #fff;
-            }
-            
-            #navbar.active {
-                transform: translateY(0);
-            }
-            
-            .nav-right {
-                width: 100%;
-                justify-content: center;
-                padding: 10px 0;
-            }
-            
-            .login {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div id="navitems">
-        <div class="logo">NEXGEN</div>
-        
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <div id="navbar">
-            <a href="Nexgen.html">Home</a>
-            <a href="Shop.html">Shop</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="support.html">Support</a>
-            <a href="Delivery.html">Delivery</a>
-            
-            <div class="nav-right">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search products...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div class="login">
-                    <a href="Login.html">Login</a>
-                </div>
-                <button id="theme-toggle" class="btn">🌙</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="bgimage" id="bgimage">
-        <div class="bgimage-overlay"></div>
-        <div class="bgimage-inner">
-            <div class="bgimage-item active" style="background-image: url('bg1.jpg');"></div>
-            <div class="bgimage-item" style="background-image: url('bg2.jpg');"></div>
-        </div>
-        <div class="content">
-            <h2>Level Up Your Game</h2>
-            <p>Experience next-gen graphics and performance</p>
-            <button class="btn"><a href="Shop.html">Shop Now</a></button>
-        </div>
-    </div>
-
-    <div class="products">
-        <h1>Top Products</h1>
-        <div class="product-container">
-            <div class="product-card">
-                <img src="ps5.png" alt="PlayStation 5">
-                <h3>PlayStation 5</h3>
-                <p>Next-gen console with stunning graphics and fast load times.</p>
-                <p class="price"> NPR 66,498.67 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
+            <div class="product">
+                <img src="Razer.png" alt="Razer BlackWidow">
+                <h3>Razer BlackWidow</h3>
+                <p>A premium mechanical gaming keyboard with RGB lighting.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 19,938.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="product-card">
+    
+            <div class="product">
+                <img src="SteelSeries.png" alt="SteelSeries Arctis 7">
+                <h3>SteelSeries Arctis 7</h3>
+                <p>A wireless gaming headset with premium sound quality.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 22,638.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="Corsair K95.png" alt="Corsair K95">
+                <h3>Corsair K95</h3>
+                <p>A high-end mechanical keyboard with Cherry MX switches.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 26,638.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="hyperex.png" alt="HyperX Pulsefire">
+                <h3>HyperX Pulsefire</h3>
+                <p>An ergonomic gaming mouse with a Pixart sensor.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 7,998.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="ASUS ROG Strix.png" alt="ASUS ROG Strix">
+                <h3>ASUS ROG Strix</h3>
+                <p>A gaming monitor with a 144Hz refresh rate.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 39,938.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="MSI Optix.png" alt="MSI Optix">
+                <h3>MSI Optix</h3>
+                <p>A curved gaming monitor with a 1ms response time.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 46,638.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="LG UltraGear.png" alt="LG UltraGear">
+                <h3>LG UltraGear</h3>
+                <p>A 27-inch gaming monitor with HDR10 support.<p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 66,638.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="BenQ Zowie.png" alt="BenQ Zowie">
+                <h3>BenQ Zowie</h3>
+                <p>A gaming monitor designed for esports..</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 33,298.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="Acer Predator.png" alt="Acer Predator">
+                <h3>Acer Predator</h3>
+                <p> A high-end gaming laptop with an RTX 3080 GPU.</p>
+                <div class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 332,998.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="Intel Core.png" alt="Intel Core i9-13900K">
+                <h3>Intel Core i9-13900K</h3>
+                <p>A top-tier 24-core, 32-thread processor.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 78,498.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product">
+                <img src="AMD Ryzen.png" alt="AMD Ryzen 9 7950X">
+                <h3>AMD Ryzen 9 7950X</h3>
+                <p>A high-performance 16-core, 32-thread processor.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 93,198.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product hidden">
+                <img src="NVIDIA RTX.png" alt="NVIDIA RTX 4090">
+                <h3>NVIDIA RTX 4090</h3>
+                <p>A flagship GPU with 24GB GDDR6X memory.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 212,998.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product hidden">
+                <img src="Samsung Odyssey.png" alt="Samsung Odyssey G9">
+                <h3>Samsung Odyssey G9</h3>
+                <p>A 49-inch ultrawide gaming monitor with a 240Hz refresh rate.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 199,998.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product hidden">
+                <img src="play station 5.png" alt="PlayStation 5">
+                <h3>PlayStation 5</h3>
+                <p> A next-gen gaming console with an ultra-high-speed SSD.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 66,638.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+    
+            <div class="product hidden">
                 <img src="xbox.png" alt="Xbox Series X">
                 <h3>Xbox Series X</h3>
-                <p>Powerful performance with 4K resolution and expansive game library.</p>
-                <p class="price"> NPR 66,498.67</p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                </div>
+                <p>A powerful gaming console with 12 Teraflops of power.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 66,638.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="product-card">
-                <img src="nintendo.png" alt="Nintendo Switch">
-                <h3>Nintendo Switch</h3>
-                <p>Hybrid console for gaming at home or on the go.</p>
-                <p class="price">NPR 39,898.67 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
+    
+            <div class="product hidden">
+                <img src="SteelSeries keyboard.png" alt="SteelSeries Apex Pro">
+                <h3>SteelSeries Apex Pro</h3>
+                <p>A mechanical keyboard with adjustable actuation.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 26,638.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="product-card">
-                <img src="Apple Vision Pro.png" alt="Virtual Reality">
-                <h3>Apple Vision Pro</h3>
-                <p>Seamless blend of digital content, offering an unparalleled spatial computing experience</p>
-                <p class="price"> NPR 66,500 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
+    
+            <div class="product hidden">
+                <img src="Logitech .png" alt="Logitech G915">
+                <h3>Logitech G915</h3>
+                <p>A wireless mechanical gaming keyboard with RGB lighting.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 33,298.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="product-card">
-                <img src="RTX.png" alt="GeForce RTX 5090 GPU">
-                <h3>GeForce RTX 5090 GPU</h3>
-                <p>The RTX 5090's DLSS 4.0 enables ultra-smooth AI-powered 8K gaming.</p>
-                <p class="price">NPR 265,998.67</p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                </div>
+    
+            <div class="product hidden">
+                <img src="HyperX Cloud.jpg" alt="HyperX Cloud II">
+                <h3>HyperX Cloud II</h3>
+                <p>A 7.1 surround sound gaming headset.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 13,298.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="product-card">
-                <img src="Asus 16.png" alt="Asus ROG G16">
-                <h3>Asus ROG G16</h3>
-                <p>16" 2.5K OLED display, 240Hz, 0.2ms, 100% DCI-P3, Pantone Validated, G-Sync, Dolby Vision HDR</p>
-                <p class="price">NPR 332,498.67 </p>
-                <div class="rating">
-                    <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                </div>
+    
+            <div class="product hidden">
+                <img src="ASUS.png" alt="ASUS ROG Zephyrus">
+                <h3>ASUS ROG Zephyrus</h3>
+                <p>An ultra-slim gaming laptop with an RTX 3080.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 399,998.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
+    
+            <div class="product hidden">
+                <img src="Macbook M2.png" alt="Apple MacBook Pro M2">
+                <h3>Apple MacBook Pro M2</h3>
+                <p>A powerful laptop with an M2 chip for gaming and productivity.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                <p class="price">NPR 266,638.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button id="show-more-btn" class="show-more-btn">
+                <i class="fas fa-chevron-down"></i> Show More
+            </button>
+            <button id="show-less-btn" class="show-less-btn hidden">
+                <i class="fas fa-chevron-up"></i> Show Less
+            </button>
         </div>
     </div>
-
-    <div class="featured">
-        <h2>Featured Products</h2>
-        <div class="featured-products-container">
-            <div class="featured-product">
-                <img src="Secretlab Titan .png" alt="Gaming Chair">
-                <div class="featured-details">
-                    <h3>Secretlab Titan Evo</h3>
-                    <p>4-Way L-ADAPT™ Lumbar Support System for personalized lower back support.</p>
-                    <p class="price">NPR 73,017 </p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            
+            <div class="payment-header">
+                <h2>Complete Your Purchase</h2>
+                <p>Select your preferred payment method</p>
+            </div>
+            
+            <div class="selected-product-info">
+                <img id="modalProductImage" src="" alt="Product Image">
+                <div class="selected-product-details">
+                    <h3 id="modalProductName">Product Name</h3>
+                    <p id="modalProductPrice">Price: NPR 0.00</p>
                 </div>
             </div>
-            <div class="featured-product">
-                <img src="HyperX Cloud.png" alt="Gaming Headset">
-                <div class="featured-details">
-                    <h3>HyperX Cloud Alpha</h3>
-                    <p>300-hour battery life, DTS Headphone:X spatial audio, durable aluminum frame and noise-cancelling mic.</p>
-                    <p class="price">NPR 10,372.67</p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
+            
+            <div class="payment-tabs">
+                <div class="payment-tab active" data-tab="digital-wallets">Digital Wallets</div>
+                <div class="payment-tab" data-tab="cards">Cards</div>
+                <div class="payment-tab" data-tab="bank-transfer">Bank Transfer</div>
             </div>
-            <div class="featured-product">
-                <img src="Logitech .png" alt="Gaming Keyboard">
-                <div class="featured-details">
-                    <h3>Logitech G915</h3>
-                    <p>A wireless mechanical gaming keyboard with RGB lighting.</p>
-                    <p class="price">NPR 33,248.67</p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
+            
+            <div class="payment-options-container">
+              
+                <div class="payment-options" id="digital-wallets-tab">
+                    <div class="payment-option" id="esewaOption">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Esewa.svg/1200px-Esewa.svg.png" alt="Esewa">
+                        <h3>Esewa</h3>
+                        <p>Pay instantly with your Esewa wallet</p>
                     </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="Razer DeathAdder.png" alt="Gaming Mouse">
-                <div class="featured-details">
-                    <h3>Razer DeathAdder V3</h3>
-                    <p>Superb ergonomics, pin-sharp wireless performance, and accurate sensor.</p>
-                    <p class="price">NPR 13,298.67 </p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
+                    
+                    <div class="payment-option" id="khaltiOption">
+                        <img src="https://khalti.com/static/images/khalti-logo.png" alt="Khalti">
+                        <h3>Khalti</h3>
+                        <p>Secure payments with Khalti</p>
                     </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="MSI MPG .png" alt="Gaming Monitor">
-                <div class="featured-details">
-                    <h3>MSI MPG 321URX QD-OLED</h3>
-                    <p>4K display features a stunning OLED panel, offering vibrant colors and deep blacks.</p>
-                    <p class="price">NPR 119,698.67 </p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-            <div class="featured-product">
-                <img src="SecretLab Magnus.png" alt="Gaming Desk">
-                <div class="featured-details">
-                    <h3>SecretLab Magnus Pro</h3>
-                    <p>precision electric height adjustment with a fully-integrated power supply column</p>
-                    <p class="price">NPR 106,267</p>
-                    <div class="rating">
-                        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i>
-                    </div>
-                    <button><a href="Shop.html">Shop Now</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="show-more-container">
-            <a href="Shop.html" class="btn">Show More</a>
-        </div>
-    </div>
-
-    <div class="reviews-container">
-        <h2>Customer Reviews</h2>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="sir1.png" alt="User 1" class="user-avatar">
-                    <div class="user-info">
-                        <p class="user-name">Alex Johnson</p>
-                        <p class="user-location">Kathmandu, Nepal</p>
+                    
+                    <div class="payment-option" id="imepayOption">
+                        <img src="https://www.imeday.com/wp-content/uploads/2020/07/Ime-Pay-Logo.png" alt="IME Pay">
+                        <h3>IME Pay</h3>
+                        <p>Pay through IME Pay wallet</p>
                     </div>
                 </div>
-                <div class="review-content">
-                    <p class="rating"> <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></p>
-                    <p class="review-text">Great gaming mouse, super responsive and comfortable for long hours of play!</p>
-                </div>
-            </div>
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 2" class="user-avatar">
-                    <div class="user-info">
-                        <p class="user-name">Sarah Williams</p>
-                        <p class="user-location">Pokhara, Nepal</p>
+                
+                <div class="payment-options" id="cards-tab" style="display:none;">
+                    <div class="payment-option" id="visaOption">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa">
+                        <h3>Visa</h3>
+                        <p>Pay with your Visa card</p>
+                    </div>
+                    
+                    <div class="payment-option" id="mastercardOption">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
+                        <h3>Mastercard</h3>
+                        <p>Pay with your Mastercard</p>
+                    </div>
+                    
+                    <div class="payment-option" id="unionpayOption">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png" alt="UnionPay">
+                        <h3>UnionPay</h3>
+                        <p>Pay with your UnionPay card</p>
                     </div>
                 </div>
-                <div class="review-content">
-                    <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></p>
-                    <p class="review-text">The keyboard is amazing! RGB lights look awesome and keys feel perfect for gaming.</p>
-                </div>
-            </div>
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 3" class="user-avatar">
-                    <div class="user-info">
-                        <p class="user-name">Rajesh Sharma</p>
-                        <p class="user-location">Lalitpur, Nepal</p>
+                
+                <div class="payment-options" id="bank-transfer-tab" style="display:none;">
+                    <div class="payment-option" id="nabilOption">
+                        <img src="https://www.nabilbank.com/wp-content/uploads/2020/04/Nabil-Bank-Logo.png" alt="Nabil Bank">
+                        <h3>Nabil Bank</h3>
+                        <p>Direct bank transfer</p>
+                    </div>
+                    
+                    <div class="payment-option" id="nicAsiaOption">
+                        <img src="https://www.nicasiabank.com/wp-content/uploads/2020/04/logo.png" alt="NIC Asia Bank">
+                        <h3>NIC Asia Bank</h3>
+                        <p>Direct bank transfer</p>
+                    </div>
+                    
+                    <div class="payment-option" id="globalIMEOption">
+                        <img src="https://www.globalimebank.com/images/logo.png" alt="Global IME Bank">
+                        <h3>Global IME Bank</h3>
+                        <p>Direct bank transfer</p>
                     </div>
                 </div>
-                <div class="review-content">
-                    <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i><i>&#9734;</i></p>
-                    <p class="review-text">Headset is comfy but the sound could be improved. Good for long gaming sessions though!</p>
-                </div>
             </div>
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User 4" class="user-avatar">
-                    <div class="user-info">
-                        <p class="user-name">Priya Gurung</p>
-                        <p class="user-location">Bhaktapur, Nepal</p>
-                    </div>
+            
+           
+            <div class="payment-form" id="esewa-form">
+                <div class="form-group">
+                    <label for="esewa-username">Esewa Username/Email</label>
+                    <input type="text" id="esewa-username" placeholder="Enter your Esewa username or email">
                 </div>
-                <div class="review-content">
-                    <p class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></p>
-                    <p class="review-text">Excellent controller! Durable, responsive, and has a great grip. Perfect for intense gaming.</p>
+                <div class="form-group">
+                    <label for="esewa-pin">Esewa PIN</label>
+                    <input type="password" id="esewa-pin" placeholder="Enter your Esewa PIN">
                 </div>
+                <button class="payment-submit" id="esewa-submit">Pay with Esewa</button>
             </div>
-        </div>
-
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7194846.440313512!2d78.83421881777386!3d28.295033798895716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995e8c77d2e68cf%3A0x34a29abcd0cc86de!2sNepal!5e0!3m2!1sen!2snp!4v1741495489263!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+      
+            <div class="payment-form" id="khalti-form">
+                <div class="form-group">
+                    <label for="khalti-mobile">Mobile Number</label>
+                    <input type="text" id="khalti-mobile" placeholder="Enter your Khalti registered mobile">
+                </div>
+                <div class="form-group">
+                    <label for="khalti-mpin">Khalti MPIN</label>
+                    <input type="password" id="khalti-mpin" placeholder="Enter your Khalti MPIN">
+                </div>
+                <button class="payment-submit" id="khalti-submit">Pay with Khalti</button>
+            </div>
+            
+       
+            <div class="payment-form" id="card-form">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group">
+                    <label for="card-expiry">Expiry Date</label>
+                    <input type="text" id="card-expiry" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label for="card-cvv">CVV</label>
+                    <input type="text" id="card-cvv" placeholder="123">
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Cardholder Name</label>
+                    <input type="text" id="card-name" placeholder="Name on card">
+                </div>
+                <button class="payment-submit" id="card-submit">Pay with Card</button>
+            </div>
+            
+            <div class="payment-form" id="bank-transfer-form">
+                <div class="form-group">
+                    <label>Bank Name</label>
+                    <input type="text" value="Nabil Bank" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Account Name</label>
+                    <input type="text" value="NEXGEN Gaming Pvt. Ltd." readonly>
+                </div>
+                <div class="form-group">
+                    <label>Account Number</label>
+                    <input type="text" value="1234567890123" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Reference</label>
+                    <input type="text" id="bank-reference" placeholder="Your name or order number">
+                </div>
+                <button class="payment-submit" id="bank-submit">Confirm Bank Transfer</button>
+            </div>
+            
+            <div class="payment-success" id="payment-success">
+                <i class="fas fa-check-circle"></i>
+                <h3>Payment Successful!</h3>
+                <p id="success-message">Your order has been placed successfully. We'll process it shortly.</p>
+                <button class="continue-shopping" id="continue-shopping">Continue Shopping</button>
+            </div>
         </div>
     </div>
 
@@ -2478,7 +1217,7 @@ body.light-mode .copyright {
                 <h3>Quick Links</h3>
                 <a href="Nexgen.html">Home</a>
                 <a href="Shop.html">Shop</a>
-                <a href="about us.html">About Us</a>
+                <a href="aboutus.html">About Us</a>
                 <a href="support.html">Support</a>
                 <a href="Delivery.html">Delivery</a>
             </div>
@@ -2511,24 +1250,12 @@ body.light-mode .copyright {
     <button id="scroll-to-top" title="Go to top">↑</button>
     <button id="live-chat" title="Live Chat">💬</button>
 
-    
-    <div class="chatbot-container" id="chatbot-container">
-        <div class="chatbot-header">
-            <h3>NexGen AI Chatbot</h3>
-            <button id="close-chatbot">&times;</button>
-        </div>
-        <div class="chatbot-messages" id="chatbot-messages">
-            <div class="message bot-message">Hello! Welcome to NexGen Gaming. How can I assist you today?</div>
-        </div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbot-input" placeholder="Type a message...">
-            <button id="send-message">Send</button>
-        </div>
-    </div>
-
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
+        
+        const navitems = document.getElementById('navitems');
+const showcase = document.querySelector('.showcase');
+showcase.style.paddingTop = `${navitems.offsetHeight + 60}px`; 
+           const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
         themeToggle.addEventListener('click', () => {
@@ -2538,20 +1265,16 @@ body.light-mode .copyright {
             themeToggle.textContent = theme === 'light' ? '🌞' : '🌙';
         });
 
-        // Check for saved theme preference
         if (localStorage.getItem('theme') === 'light') {
             body.classList.add('light-mode');
             themeToggle.textContent = '🌞';
         }
 
-        // Scroll to Top Button
         const scrollToTopBtn = document.getElementById('scroll-to-top');
         let prevScrollpos = window.pageYOffset;
 
         window.onscroll = function() {
             const currentScrollPos = window.pageYOffset;
-            
-            // Hide/show navbar on scroll
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navitems").style.top = "0";
             } else {
@@ -2559,7 +1282,6 @@ body.light-mode .copyright {
             }
             prevScrollpos = currentScrollPos;
 
-            // Show/hide scroll to top button
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 scrollToTopBtn.style.display = 'block';
             } else {
@@ -2568,108 +1290,97 @@ body.light-mode .copyright {
         };
 
         scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const showLessBtn = document.getElementById('show-less-btn');
+        const hiddenProducts = document.querySelectorAll('.product.hidden');
+
+        showMoreBtn.addEventListener('click', () => {
+            hiddenProducts.forEach(product => {
+                product.classList.remove('hidden');
             });
+            showMoreBtn.classList.add('hidden');
+            showLessBtn.classList.remove('hidden');
         });
 
-        // Background Image Slideshow
-        const bgItems = document.querySelectorAll('.bgimage-item');
-        let currentIndex = 0;
-
-        function changeBackgroundImage() {
-            bgItems[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % bgItems.length;
-            bgItems[currentIndex].classList.add('active');
-        }
-        const imageSwapInterval = setInterval(changeBackgroundImage, 3500);
-
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const navbar = document.getElementById('navbar');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            mobileMenuToggle.innerHTML = navbar.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#navbar a').forEach(link => {
-            link.addEventListener('click', () => {
-                navbar.classList.remove('active');
-                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        showLessBtn.addEventListener('click', () => {
+            hiddenProducts.forEach(product => {
+                product.classList.add('hidden');
             });
+            showLessBtn.classList.add('hidden');
+            showMoreBtn.classList.remove('hidden');
         });
 
-        // Chatbot Functionality
-        const liveChatBtn = document.getElementById('live-chat');
-        const chatbotContainer = document.getElementById('chatbot-container');
-        const closeChatbotBtn = document.getElementById('close-chatbot');
-        const chatbotMessages = document.getElementById('chatbot-messages');
-        const chatbotInput = document.getElementById('chatbot-input');
-        const sendMessageBtn = document.getElementById('send-message');
+const paymentModal = document.getElementById('paymentModal');
+const closeModal = document.getElementById('closeModal');
+const buyNowButtons = document.querySelectorAll('.buy-now-btn');
+const modalProductName = document.getElementById('modalProductName');
+const modalProductPrice = document.getElementById('modalProductPrice');
+const modalProductImage = document.getElementById('modalProductImage');
+const paymentSuccess = document.getElementById('payment-success');
+const continueShopping = document.getElementById('continue-shopping');
 
-        liveChatBtn.addEventListener('click', () => {
-            chatbotContainer.style.display = 'flex';
-        });
+buyNowButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const product = this.closest('.product');
+        modalProductName.textContent = product.querySelector('h3').textContent;
+        modalProductPrice.textContent = `Price: ${product.querySelector('.price').textContent}`;
+        modalProductImage.src = product.querySelector('img').src;
+        
+        paymentModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+});
 
-        closeChatbotBtn.addEventListener('click', () => {
-            chatbotContainer.style.display = 'none';
-        });
+function closePaymentModal() {
+    paymentModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    document.querySelectorAll('.payment-form').forEach(form => form.style.display = 'none');
+    paymentSuccess.style.display = 'none';
+}
 
-        function addMessage(message, isUser) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message');
-            messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
-            messageDiv.textContent = message;
-            chatbotMessages.appendChild(messageDiv);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+closeModal.addEventListener('click', closePaymentModal);
+continueShopping.addEventListener('click', closePaymentModal);
+
+document.querySelectorAll('.payment-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        document.querySelectorAll('.payment-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        
+        document.querySelectorAll('.payment-options').forEach(opt => opt.style.display = 'none');
+        document.getElementById(`${this.dataset.tab}-tab`).style.display = 'grid';
+        
+        document.querySelectorAll('.payment-form').forEach(form => form.style.display = 'none');
+    });
+});
+
+document.querySelectorAll('.payment-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.payment-form').forEach(form => form.style.display = 'none');
+        
+        const formId = `${this.id.replace('Option', '')}-form`;
+        if (document.getElementById(formId)) {
+            document.getElementById(formId).style.display = 'block';
         }
+    });
+});
 
-        sendMessageBtn.addEventListener('click', () => {
-            const userMessage = chatbotInput.value.trim();
-            if (userMessage) {
-                addMessage(userMessage, true);
-                chatbotInput.value = '';
+document.querySelectorAll('.payment-submit').forEach(button => {
+    button.addEventListener('click', function() {
+        const method = this.textContent.replace('Pay with ', '').replace('Confirm ', '');
+        document.querySelectorAll('.payment-form').forEach(form => form.style.display = 'none');
+        
+        document.getElementById('success-message').textContent = 
+            `Thank you for purchasing ${modalProductName.textContent} via ${method}. ` +
+            `Your payment of ${modalProductPrice.textContent.replace('Price: ', '')} was successful.`;
+            
+        paymentSuccess.style.display = 'block';
+    });
+});
 
-                // Simple bot responses
-                setTimeout(() => {
-                    const responses = [
-                        "I'm here to help! What else can I do for you?",
-                        "Thanks for your message! How can I assist you further?",
-                        "Our support team can help with that. Would you like me to connect you?",
-                        "Great question! Let me find that information for you."
-                    ];
-                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                    addMessage(randomResponse, false);
-                }, 1000);
-            }
-        });
-
-        chatbotInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessageBtn.click();
-            }
-        });
-
-        // Close chatbot when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!chatbotContainer.contains(e.target) && e.target !== liveChatBtn) {
-                chatbotContainer.style.display = 'none';
-            }
-        });
-
-        // Responsive adjustments for window resize
-        function handleResize() {
-            if (window.innerWidth > 575) {
-                navbar.classList.remove('active');
-                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        }
-
-        window.addEventListener('resize', handleResize);
     </script>
 </body>
 </html>

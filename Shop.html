@@ -162,6 +162,103 @@ body.light-mode #theme-toggle {
     color: #f39c12;
     transform: scale(1.1);
 }
+
+.chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 400px;
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .chatbot-header {
+            background-color: #f39c12;
+            color: #0a0a0a;
+            padding: 15px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .chatbot-header button {
+            background: none;
+            border: none;
+            color: #0a0a0a;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .bot-message {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: #0a0a0a;
+            align-self: flex-end;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 10px;
+            background-color: #2c2c2c;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            color: #ffffff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background: #f39c12;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #0a0a0a;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background: #e67e22;
+        }
+
         .showcase {
             padding: 50px 20px;
             text-align: center;
@@ -555,7 +652,16 @@ body.light-mode #theme-toggle {
                 <p class="price">NPR 7,998.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-    
+
+            <div class="product">
+                <img src="Secretlab Titan .png" alt="Gaming Chair">
+                <h3>Secretlab Titan Evo</h3>
+                <p>4-Way L-ADAPT™ Lumbar Support System for personalized lower back support.</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 73,017 </p>
+                <button><a href="Shop.html">Buy Now</a></button>
+            </div>
+
             <div class="product">
                 <img src="ASUS ROG Strix.png" alt="ASUS ROG Strix">
                 <h3>ASUS ROG Strix</h3>
@@ -609,6 +715,15 @@ body.light-mode #theme-toggle {
                 <p class="price">NPR 78,498.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
+
+            <div class="product">
+                <img src="Apple Vision Pro.png" alt="Virtual Reality">
+                <h3>Apple Vision Pro</h3>
+                <p>Seamless blend of digital content, offering an unparalleled spatial computing experience</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i> </div>
+                <p class="price"> NPR 66,500 </p>
+                 <button class="buy-now-btn">Buy Now</button>
+                </div>
     
             <div class="product">
                 <img src="AMD Ryzen.png" alt="AMD Ryzen 9 7950X">
@@ -616,6 +731,15 @@ body.light-mode #theme-toggle {
                 <p>A high-performance 16-core, 32-thread processor.</p>
                 <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
                 <p class="price">NPR 93,198.67</p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="Asus 16.png" alt="Asus ROG G16">
+                <h3>Asus ROG G16</h3>
+                <p>16" 2.5K OLED display, 240Hz, 0.2ms, 100% DCI-P3, Pantone Validated, G-Sync, Dolby Vision HDR</p>
+                <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                <p class="price">NPR 332,498.67 </p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
     
@@ -627,6 +751,8 @@ body.light-mode #theme-toggle {
                 <p class="price">NPR 212,998.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
+
+
     
             <div class="product hidden">
                 <img src="Samsung Odyssey.png" alt="Samsung Odyssey G9">
@@ -654,7 +780,7 @@ body.light-mode #theme-toggle {
                 <p class="price">NPR 66,638.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
-    
+
             <div class="product hidden">
                 <img src="SteelSeries keyboard.png" alt="SteelSeries Apex Pro">
                 <h3>SteelSeries Apex Pro</h3>
@@ -663,6 +789,33 @@ body.light-mode #theme-toggle {
                 <p class="price">NPR 26,638.67</p>
                 <button class="buy-now-btn">Buy Now</button>
             </div>
+
+            <div class="product hidden">
+                <img src="Razer DeathAdder.png" alt="Gaming Mouse">
+                    <h3>Razer DeathAdder V3</h3>
+                    <p>Superb ergonomics, pin-sharp wireless performance, and accurate sensor.</p>
+                    <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                    <p class="price">NPR 13,298.67 </p>
+                    <button><a href="Shop.html">Buy Now</a></button>
+                </div>
+        
+            <div class="product hidden">
+                <img src="MSI MPG .png" alt="Gaming Monitor">
+                    <h3>MSI MPG 321URX QD-OLED</h3>
+                    <p>4K display features a stunning OLED panel, offering vibrant colors and deep blacks.</p>
+                    <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></div>
+                    <p class="price">NPR 119,698.67 </p>
+                    <button><a href="Shop.html">Buy Now</a></button>
+                </div>
+    
+            <div class="product hidden">
+                <img src="SecretLab Magnus.png" alt="Gaming Desk">
+                    <h3>SecretLab Magnus Pro</h3>
+                    <p>precision electric height adjustment with a fully-integrated power supply column</p>
+                    <div class="rating"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9734;</i></div>
+                    <p class="price">NPR 106,267</p>
+                    <button><a href="Shop.html">Buy Now</a></button>
+                </div>
     
             <div class="product hidden">
                 <img src="Logitech .png" alt="Logitech G915">
@@ -759,6 +912,21 @@ body.light-mode #theme-toggle {
 
     <button id="scroll-to-top" title="Go to top">↑</button>
     <button id="live-chat" title="Live Chat">💬</button>
+     
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <h3>NexGen AI Chatbot</h3>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">Hello! Welcome to NexGen Gaming. How can I assist you today?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Type a message...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+
 
     <script>
         const navitems = document.getElementById('navitems');
@@ -829,6 +997,51 @@ showcase.style.paddingTop = `${navitems.offsetHeight + 60}px`;
             showLessBtn.classList.add('hidden');
             showMoreBtn.classList.remove('hidden');
         });
+
+        
+        const liveChatBtn = document.getElementById('live-chat');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const closeChatbotBtn = document.getElementById('close-chatbot');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const sendMessageBtn = document.getElementById('send-message');
+
+
+        liveChatBtn.addEventListener('click', () => {
+            chatbotContainer.style.display = 'flex';
+        });
+
+        closeChatbotBtn.addEventListener('click', () => {
+            chatbotContainer.style.display = 'none';
+        });
+
+        function addMessage(message, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+            messageDiv.textContent = message;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        sendMessageBtn.addEventListener('click', () => {
+            const userMessage = chatbotInput.value.trim();
+            if (userMessage) {
+                addMessage(userMessage, true);
+                chatbotInput.value = '';
+
+                setTimeout(() => {
+                    addMessage("I'm here to help! What else can I do for you?", false);
+                }, 1000);
+            }
+        });
+
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessageBtn.click();
+            }
+        });
+
     </script>
 </body>
 </html>
